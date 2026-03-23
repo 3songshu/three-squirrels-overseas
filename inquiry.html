@@ -58,7 +58,7 @@
         <div class="inquiry-page-header">
           <div>
             <h1 class="page-title">
-              <i data-lucide="clipboard-list" style="width:26px;height:26px;color:#FF6B35;"></i>
+              <i data-lucide="clipboard-list" style="width:26px;height:26px;color:#E17055;"></i>
               My Inquiry List
             </h1>
             <p class="page-subtitle">Review your selected products and submit your inquiry to our sales team.</p>
@@ -78,7 +78,7 @@
             <!-- PRODUCTS TABLE -->
             <div class="card">
               <div class="card-header">
-                <h3><i data-lucide="package" style="width:18px;height:18px;color:#FF6B35;"></i> Selected Products <span class="count-badge" id="countBadge">0</span></h3>
+                <h3><i data-lucide="package" style="width:18px;height:18px;color:#E17055;"></i> Selected Products <span class="count-badge" id="countBadge">0</span></h3>
               </div>
               <div class="table-wrap">
                 <table class="inquiry-table" id="inquiryTable">
@@ -107,7 +107,7 @@
             <!-- CUSTOMER FORM -->
             <div class="card">
               <div class="card-header">
-                <h3><i data-lucide="user" style="width:18px;height:18px;color:#FF6B35;"></i> Your Information</h3>
+                <h3><i data-lucide="user" style="width:18px;height:18px;color:#E17055;"></i> Your Information</h3>
                 <p>Our sales team will contact you within 24 hours.</p>
               </div>
               <div class="form-grid">
@@ -136,7 +136,7 @@
 
             <!-- SUBMIT METHODS -->
             <div class="card submit-card">
-              <h3 class="submit-title"><i data-lucide="send" style="width:18px;height:18px;color:#FF6B35;"></i> How would you like to submit your inquiry?</h3>
+              <h3 class="submit-title"><i data-lucide="send" style="width:18px;height:18px;color:#E17055;"></i> How would you like to submit your inquiry?</h3>
               <div class="submit-btns">
                 <button class="submit-btn image-btn" onclick="downloadInquiryImage()">
                   <div class="submit-btn-icon"><i data-lucide="image" style="width:24px;height:24px;color:#07BC0C;"></i></div>
@@ -179,7 +179,7 @@
           <div class="inquiry-sidebar">
 
             <div class="sidebar-card">
-              <h4><i data-lucide="lightbulb" style="width:16px;height:16px;color:#FF6B35;"></i> How It Works</h4>
+              <h4><i data-lucide="lightbulb" style="width:16px;height:16px;color:#E17055;"></i> How It Works</h4>
               <ol class="tips-list">
                 <li>Browse & select products</li>
                 <li>Add them to your inquiry list</li>
@@ -190,7 +190,7 @@
             </div>
 
             <div class="sidebar-card">
-              <h4><i data-lucide="headphones" style="width:16px;height:16px;color:#FF6B35;"></i> Need Help?</h4>
+              <h4><i data-lucide="headphones" style="width:16px;height:16px;color:#E17055;"></i> Need Help?</h4>
               <p style="font-size:0.85rem;color:#636E72;margin:0 0 12px;line-height:1.6;">Our sales team is ready to assist with your inquiry.</p>
               <div class="contact-list">
                 <a href="mailto:overseas@three-squirrels.com" class="contact-item">
@@ -205,7 +205,7 @@
             </div>
 
             <div class="sidebar-card">
-              <h4><i data-lucide="grid-3x3" style="width:16px;height:16px;color:#FF6B35;"></i> Categories</h4>
+              <h4><i data-lucide="grid-3x3" style="width:16px;height:16px;color:#E17055;"></i> Categories</h4>
               <div class="cat-chips">
                 <a href="products.html?cat=nuts" class="cat-chip">Nuts & Seeds</a>
                 <a href="products.html?cat=dried-fruits" class="cat-chip">Dried Fruits</a>
@@ -454,15 +454,15 @@
       const container = document.getElementById('imageCaptureArea');
       container.innerHTML = `
         <div style="padding:48px 52px;background:#fff;">
-          <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid #FF6B35;padding-bottom:24px;margin-bottom:32px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid #E17055;padding-bottom:24px;margin-bottom:32px;">
             <div>
-              <div style="font-size:11px;color:#FF6B35;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">🐿️ Three Squirrels Overseas</div>
-              <div style="font-size:26px;font-weight:700;color:#2D3436;">Product Inquiry List</div>
+              <div style="font-size:11px;color:#E17055;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">🐿️ Three Squirrels Overseas</div>
+              <div style="font-size:26px;font-weight:700;color:#2B2F38;">Product Inquiry List</div>
               <div style="font-size:13px;color:#636E72;margin-top:4px;">${new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})}</div>
             </div>
             <div style="text-align:right;">
               <div style="font-size:11px;color:#636E72;text-transform:uppercase;letter-spacing:1px;">Est. Total</div>
-              <div style="font-size:32px;font-weight:700;color:#FF6B35;">$${total.toFixed(2)}</div>
+              <div style="font-size:32px;font-weight:700;color:#E17055;">$${total.toFixed(2)}</div>
               <div style="font-size:12px;color:#B2BEC3;">${list.length} product${list.length>1?'s':''}</div>
             </div>
           </div>
@@ -482,25 +482,25 @@
                 <tr style="border-bottom:1px solid #F0F3F5;">
                   <td style="padding:12px 8px;color:#B2BEC3;font-weight:600;font-size:13px;">${i+1}</td>
                   <td style="padding:12px 8px;">
-                    <div style="font-weight:600;font-size:13px;color:#2D3436;">${p.name}</div>
+                    <div style="font-weight:600;font-size:13px;color:#2B2F38;">${p.name}</div>
                     ${p.tags&&p.tags.length?`<div style="font-size:11px;color:#E67E22;margin-top:2px;">${p.tags.join(' · ')}</div>`:''}
                   </td>
                   <td style="padding:12px 8px;font-size:12px;color:#636E72;">${p.category}</td>
                   <td style="padding:12px 8px;font-size:12px;color:#636E72;white-space:nowrap;">${p.moq} ${p.unit||'units'}</td>
                   <td style="padding:12px 8px;font-size:12px;color:#636E72;white-space:nowrap;">${p.qty} ${p.unit||'units'}</td>
-                  <td style="padding:12px 8px;font-size:14px;font-weight:700;color:#FF6B35;text-align:right;">$${((p.priceMin||0)*p.qty).toFixed(2)}</td>
+                  <td style="padding:12px 8px;font-size:14px;font-weight:700;color:#E17055;text-align:right;">$${((p.priceMin||0)*p.qty).toFixed(2)}</td>
                 </tr>
               `).join('')}
             </tbody>
           </table>
           ${(fCompany||fName||fEmail||fPhone)?`
-          <div style="border-top:2px solid #FF6B35;padding-top:20px;margin-bottom:20px;">
+          <div style="border-top:2px solid #E17055;padding-top:20px;margin-bottom:20px;">
             <div style="font-size:11px;font-weight:700;color:#636E72;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Buyer Information</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;">
-              ${fCompany?`<div><span style="color:#636E72;">Company:</span> <strong style="color:#2D3436;">${fCompany}</strong></div>`:''}
-              ${fName?`<div><span style="color:#636E72;">Contact:</span> <strong style="color:#2D3436;">${fName}</strong></div>`:''}
-              ${fEmail?`<div><span style="color:#636E72;">Email:</span> <strong style="color:#2D3436;">${fEmail}</strong></div>`:''}
-              ${fPhone?`<div><span style="color:#636E72;">Phone:</span> <strong style="color:#2D3436;">${fPhone}</strong></div>`:''}
+              ${fCompany?`<div><span style="color:#636E72;">Company:</span> <strong style="color:#2B2F38;">${fCompany}</strong></div>`:''}
+              ${fName?`<div><span style="color:#636E72;">Contact:</span> <strong style="color:#2B2F38;">${fName}</strong></div>`:''}
+              ${fEmail?`<div><span style="color:#636E72;">Email:</span> <strong style="color:#2B2F38;">${fEmail}</strong></div>`:''}
+              ${fPhone?`<div><span style="color:#636E72;">Phone:</span> <strong style="color:#2B2F38;">${fPhone}</strong></div>`:''}
             </div>
             ${fMessage?`<div style="margin-top:8px;font-size:12px;color:#636E72;"><strong>Note:</strong> ${fMessage}</div>`:''}
           </div>`:''}
