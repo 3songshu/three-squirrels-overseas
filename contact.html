@@ -1,123 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Three Squirrels Overseas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/inquiry.js"></script>
-  <style>
-    .page-hero { background:linear-gradient(135deg,#171C23 0%,#2B2F38 100%); padding:80px 0 56px; text-align:center; color:#fff; }
-    .page-hero h1 { font-family:Poppins; font-size:clamp(1.8rem,4vw,2.6rem); font-weight:700; margin-bottom:10px; }
-    .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:40px; align-items:start; }
-    .contact-card { background:#fff; border-radius:20px; border:1.5px solid #E8E8E8; padding:32px; margin-bottom:20px; transition:all 0.3s; }
-    .contact-card:hover { border-color:#E17055; transform:translateY(-3px); box-shadow:0 12px 32px rgba(0,0,0,0.08); }
-    .contact-card h3 { font-family:Poppins; font-size:1.05rem; font-weight:600; color:#2B2F38; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
-    .contact-card p { font-size:0.9rem; color:#636E72; line-height:1.7; }
-    .contact-card a { color:#E17055; text-decoration:none; font-weight:500; }
-    .contact-card a:hover { text-decoration:underline; }
-    .form-group { margin-bottom:20px; }
-    .form-group label { display:block; font-size:0.85rem; font-weight:600; color:#2B2F38; margin-bottom:6px; }
-    .form-group input, .form-group textarea, .form-group select { width:100%; padding:11px 14px; border:1.5px solid #E0E0E0; border-radius:10px; font-size:0.9rem; font-family:inherit; transition:border 0.2s; box-sizing:border-box; }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline:none; border-color:#E17055; }
-    .form-group textarea { resize:vertical; min-height:100px; }
-    .submit-btn { background:#E17055; color:#fff; border:none; border-radius:10px; padding:13px 32px; font-size:0.95rem; font-weight:700; cursor:pointer; width:100%; font-family:inherit; transition:background 0.2s; }
-    .submit-btn:hover { background:#D35D43; }
-    .info-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px; }
-    .info-item { display:flex; align-items:flex-start; gap:10px; font-size:0.88rem; color:#2B2F38; }
-    .info-item i { color:#E17055; flex-shrink:0; margin-top:2px; }
-    @media(max-width:768px) { .contact-grid { grid-template-columns:1fr; } .info-grid { grid-template-columns:1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Three Squirrels Overseas</title>
+<meta name="description" content="Contact Three Squirrels Overseas. Email: overseas@three-squirrels.com. Stock: 300783.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="Three Squirrels" class="logo-img"></a>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="products.html" class="nav-link">Products</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a href="inquiry.html" class="cart-btn"><i data-lucide="shopping-cart"></i><span class="cart-badge" id="cartBadge" style="display:none;">0</span></a>
-        <a href="products.html" class="btn btn-primary btn-sm">Start Sourcing</a>
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html"><img src="images/logo.png" alt="Three Squirrels" class="logo-img"></a>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="news.html" class="nav-link">News</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang">
+        <a href="?lang=en" class="active">EN</a><span>|</span>
+        <a href="?lang=zh">中文</a><span>|</span>
+        <a href="?lang=ko">한국어</a>
       </div>
+      <a href="inquiry.html" class="cart-btn"><i data-lucide="shopping-cart" style="width:16px;height:16px;"></i></a>
+      <a href="products.html" class="btn btn-yellow btn-sm">Products</a>
     </div>
-  </header>
-
-  <div class="page-hero">
-    <h1>Contact Our Export Team</h1>
-    <p>We reply to all distributor inquiries within 24 hours on business days</p>
   </div>
+</header>
 
-  <div class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div>
-          <div class="contact-card">
-            <h3>📧 Email</h3>
-            <p><a href="mailto:overseas@three-squirrels.com">overseas@three-squirrels.com</a></p>
-            <p style="margin-top:8px;font-size:0.82rem;">Best for: detailed product specs, sample requests, custom label inquiries</p>
-          </div>
-          <div class="contact-card">
-            <h3>📞 Phone</h3>
-            <p><a href="tel:+864008888888">+86 400-888-8888</a></p>
-            <p style="margin-top:8px;font-size:0.82rem;">Business hours: Mon–Fri 9:00–18:00 CST (UTC+8)</p>
-          </div>
-          <div class="contact-card">
-            <h3>📍 Headquarters</h3>
-            <p>No. 2888 Chengbei Avenue<br>Hefei, Anhui Province 230000<br>China</p>
-          </div>
-          <div class="contact-card">
-            <h3>🏛️ Stock Information</h3>
-            <p><strong>Shenzhen Stock Exchange</strong><br>Stock Code: <strong>300783</strong><br>Company: Anhui Three Squirrels Co., Ltd.</p>
-          </div>
-        </div>
-        <div style="background:#fff; border-radius:20px; border:1.5px solid #E8E8E8; padding:36px;">
-          <h2 style="font-family:Poppins; font-size:1.4rem; font-weight:700; color:#2B2F38; margin-bottom:24px;">Send us a message</h2>
-          <form onsubmit="event.preventDefault(); alert('Thank you! Our team will reply within 24 hours.');">
-            <div class="form-group">
-              <label>Full Name *</label>
-              <input type="text" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-              <label>Company / Business Name *</label>
-              <input type="text" placeholder="Company name" required>
-            </div>
-            <div class="form-group">
-              <label>Country / Region *</label>
-              <input type="text" placeholder="e.g. United States" required>
-            </div>
-            <div class="form-group">
-              <label>Email Address *</label>
-              <input type="email" placeholder="your@email.com" required>
-            </div>
-            <div class="form-group">
-              <label>Inquiry Type</label>
-              <select><option>Request product catalog</option><option>Sample order</option><option>Custom label / packaging</option><option>Shipping & logistics</option><option>Distributor partnership</option><option>Other</option></select>
-            </div>
-            <div class="form-group">
-              <label>Message</label>
-              <textarea placeholder="Tell us about your business and what products you're interested in..."></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Inquiry →</button>
-          </form>
-        </div>
+<section style="background:var(--dark);padding:120px 0 60px;text-align:center;">
+  <div class="container">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,215,0,0.12);border:1px solid rgba(255,215,0,0.25);color:#FFD700;padding:6px 16px;border-radius:50px;font-size:0.8rem;font-weight:600;margin-bottom:20px;">Get in Touch</div>
+    <h1 style="font-family:'Poppins',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:16px;">Let's Talk Business</h1>
+    <p style="color:rgba(255,255,255,0.6);font-size:1rem;max-width:480px;margin:0 auto;line-height:1.75;">Whether you're a distributor, retailer, or importer — we'd love to hear from you. Reply within 24 hours.</p>
+  </div>
+</section>
+
+<section class="section-light" style="padding:80px 0 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+      <div style="background:#fff;border:2px solid #F0E8D8;border-radius:20px;padding:32px 24px;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:#FFD700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.4rem;">📧</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:8px;color:var(--text);">Email Us</h3>
+        <p style="font-size:0.85rem;color:var(--text-2);line-height:1.7;margin-bottom:12px;">overseas@three-squirrels.com</p>
+        <a href="mailto:overseas@three-squirrels.com" style="font-size:0.82rem;font-weight:700;color:var(--accent);">Send Email →</a>
+      </div>
+      <div style="background:#fff;border:2px solid #F0E8D8;border-radius:20px;padding:32px 24px;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:#FFD700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.4rem;">📞</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:8px;color:var(--text);">Call Us</h3>
+        <p style="font-size:0.85rem;color:var(--text-2);line-height:1.7;margin-bottom:12px;">+86 400-888-8888</p>
+        <a href="tel:+864008888888" style="font-size:0.82rem;font-weight:700;color:var(--accent);">Call Now →</a>
+      </div>
+      <div style="background:#fff;border:2px solid #F0E8D8;border-radius:20px;padding:32px 24px;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:#FFD700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.4rem;">📍</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:8px;color:var(--text);">Headquarters</h3>
+        <p style="font-size:0.85rem;color:var(--text-2);line-height:1.7;margin-bottom:12px;">Hefei, Anhui Province, China</p>
+        <a href="https://maps.google.com/?q=Hefei,Anhui,China" target="_blank" style="font-size:0.82rem;font-weight:700;color:var(--accent);">View Map →</a>
+      </div>
+      <div style="background:#fff;border:2px solid #F0E8D8;border-radius:20px;padding:32px 24px;text-align:center;">
+        <div style="width:56px;height:56px;border-radius:16px;background:#FFD700;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.4rem;">📈</div>
+        <h3 style="font-family:'Poppins',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:8px;color:var(--text);">Stock Info</h3>
+        <p style="font-size:0.85rem;color:var(--text-2);line-height:1.7;margin-bottom:12px;">300783 (SZSE ChiNext)</p>
+        <a href="http://www.sse.com.cn" target="_blank" style="font-size:0.82rem;font-weight:700;color:var(--accent);">View Stock →</a>
       </div>
     </div>
   </div>
+</section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <p>© 2026 Three Squirrels Overseas. All rights reserved. | Stock Code: 300783 | Shenzhen Stock Exchange</p>
+<section class="section">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:start;">
+      <div>
+        <span class="section-label">Send a Message</span>
+        <h2 class="section-title" style="text-align:left;margin-bottom:16px;">We Reply Within 24 Hours</h2>
+        <p style="font-size:1rem;color:var(--text-2);line-height:1.8;margin-bottom:32px;">Fill out the form and our export team will get back to you with a detailed quotation and sample options. No commitment required.</p>
+        <div style="background:#FFFCF5;border:2px solid #F0E8D8;border-radius:20px;padding:28px 24px;margin-bottom:20px;">
+          <div style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--dark);margin-bottom:12px;font-size:0.95rem;">What Happens After You Submit?</div>
+          <div style="font-size:0.88rem;color:var(--text-2);line-height:1.8;">
+            <div style="margin-bottom:8px;"><strong style="color:var(--accent);">1.</strong> Export manager reviews within 2 hours</div>
+            <div style="margin-bottom:8px;"><strong style="color:var(--accent);">2.</strong> Detailed quotation with freight options sent</div>
+            <div style="margin-bottom:8px;"><strong style="color:var(--accent);">3.</strong> Sample orders — ships within 5 business days</div>
+            <div><strong style="color:var(--accent);">4.</strong> Full order production with timeline updates</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:2px solid #F0E8D8;border-radius:16px;padding:20px 24px;display:flex;align-items:center;gap:16px;">
+          <div style="font-size:2rem;">🌐</div>
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:0.9rem;color:var(--dark);">Global Business Hours</div>
+            <div style="font-size:0.85rem;color:var(--text-2);">Monday–Friday, 9:00 AM – 6:00 PM CST (UTC+8)</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <form id="contactForm">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-group">
+              <label class="form-label">First Name *</label>
+              <input type="text" class="form-input" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name *</label>
+              <input type="text" class="form-input" placeholder="Smith" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Company *</label>
+            <input type="text" class="form-input" placeholder="ABC Trading Co., Ltd." required>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input type="email" class="form-input" placeholder="john@abctrading.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Country *</label>
+              <select class="form-select" required>
+                <option value="">Select country...</option>
+                <option>United Arab Emirates</option><option>Saudi Arabia</option><option>Qatar</option>
+                <option>Japan</option><option>South Korea</option><option>Indonesia</option>
+                <option>Malaysia</option><option>Singapore</option>
+                <option>United States</option><option>Germany</option>
+                <option>United Kingdom</option><option>Australia</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Interested In *</label>
+            <select class="form-select" required>
+              <option value="">Select product...</option>
+              <option>Premium Cashew Nuts</option><option>Almonds</option>
+              <option>Pistachios</option><option>Goji Berries</option>
+              <option>Dried Shrimp</option><option>CNY Gift Sets</option>
+              <option>Multiple Products</option><option>Private Label / OEM</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Tell us about your business, estimated volume, destination port, specific requirements..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;padding:14px 24px;font-size:0.95rem;justify-content:center;">Send Inquiry →</button>
+          <p style="font-size:0.78rem;color:var(--text-3);text-align:center;margin-top:12px;">We respond within 24 hours on business days.</p>
+        </form>
       </div>
     </div>
-  </footer>
-  <script>document.addEventListener('DOMContentLoaded',()=>{lucide.createIcons();updateCartBadge();});</script>
-</body>
-</html>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div style="background:var(--dark);border-radius:24px;padding:48px 40px;">
+        <div style="font-family:'Poppins',sans-serif;font-size:4.5rem;font-weight:800;color:#FFD700;line-height:1;margin-bottom:12px;">300783</div>
+        <div style="font-size:0.85rem;color:#FFD700;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;">Shenzhen Stock Exchange</div>
+        <div style="font-size:0.82rem;color:rgba(255,255,255,0.5);margin-bottom:24px;">ChiNext Board — Listed 2019</div>
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:20px;">Three Squirrels (300783) is listed on the Shenzhen Stock Exchange ChiNext Board. Our commitment to quality and growth has made us one of China's most recognized snack brands.</p>
+        <a href="http://www.sse.com.cn" target="_blank" class="btn btn-yellow" style="display:inline-flex;">View Stock Info →</a>
+      </div>
+      <div>
+        <div style="background:#fff;border:2px solid #F0E8D8;border-radius:20px;padding:32px;margin-bottom:20px;">
+          <div style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--dark);margin-bottom:16px;">🏢 Mailing Address</div>
+          <p style="font-size:0.9rem;color:var(--text-2);line-height:1.8;">
+            Three Squirrels Food Co., Ltd.<br>
+            No. 1688 Xian Road, Hefei Economic and Technological Development Zone<br>
+            Hefei, Anhui Province 230000, China
+          </p>
+        </div>
+        <div style="background:#fff;border:2px solid #F0E8D8;border-radius:20px;padding:32px;">
+          <div style="font-family:'Poppins',sans-serif;font-weight:700;color:var(--dark);margin-bottom:16px;">🌐 Business Hours</div>
+          <p style="font-size:0.9rem;color:var(--text-2);line-height:1.8;">
+            Monday – Friday: 9:00 AM – 6:00 PM CST (UTC+8)<br>
+            Email: overseas@three-squirrels.com<br>
+            Tel: +86 400-888-8888
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Three Squirrels" class="footer-logo">
+        <p>Leading Chinese snack exporter since 2012. Stock Code: 300783, Shenzhen Stock Exchange.</p>
+      </div>
+      <div><h4>Company</h4><a href="about.html">About Us</a><a href="news.html">News</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div>
+      <div><h4>Products</h4><a href="products.html">All Products</a><a href="products.html?cat=nuts">Premium Nuts</a><a href="products.html?cat=dried">Dried Fruits</a><a href="products.html?cat=gift">Gift Sets</a></div>
+      <div><h4>Contact</h4><a href="mailto:overseas@three-squirrels.com">overseas@three-squirrels.com</a><a href="tel:+864008888888">+86 400-888-8888</a><a href="contact.html">Send Inquiry →</a></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Three Squirrels Overseas. All rights reserved. | Stock Code: 300783 | Shenzhen Stock Exchange</p></div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.lucide) lucide.createIcons();
+  window.addEventListener('scroll', function() {
+    var h = document.querySelector('.header');
+    if (h) { if (window.scrollY > 40) h.classList.add('scrolled'); else h.classList.remove('scrolled'); }
+  });
+  var form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type=submit]');
+      btn.textContent = '✓ Inquiry Sent — We\'ll Reply Within 24h';
+      btn.style.background = '#FFD700';
+      btn.style.color = '#1C1410';
+    });
+  }
+});
+</script>
+</body></html>
