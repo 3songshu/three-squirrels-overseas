@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Three Squirrels | 三只松鼠官网</title>
-  <meta name="description" content="Learn about Three Squirrels - China's leading snack food brand founded in 2012, listed on Shenzhen Stock Exchange (300783), serving distributors in 20+ countries worldwide.">
+  <title>About Us | Three Squirrels Overseas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/png" href="images/logo-original.png">
   <script src="js/inquiry.js"></script>
+  <style>
+    .page-hero { position:relative; background:linear-gradient(135deg,#1a1a2e 0%,#2D3436 100%); padding:100px 0 72px; text-align:center; color:#fff; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 30% 50%, rgba(255,107,53,0.15) 0%, transparent 60%); }
+    .page-hero h1 { font-family:Poppins; font-size:clamp(2rem,5vw,3rem); font-weight:700; margin-bottom:12px; position:relative; }
+    .page-hero p { color:rgba(255,255,255,0.72); font-size:1.05rem; position:relative; }
+    .section { padding:72px 0; }
+    .timeline { position:relative; max-width:800px; margin:0 auto; padding-left:40px; border-left:3px solid #FF6B35; }
+    .timeline-item { position:relative; margin-bottom:48px; }
+    .timeline-item::before { content:''; position:absolute; left:-49px; top:4px; width:18px; height:18px; border-radius:50%; background:#FF6B35; border:3px solid #fff; box-shadow:0 0 0 3px #FF6B35; }
+    .timeline-year { font-family:Poppins; font-size:1.4rem; font-weight:700; color:#FF6B35; margin-bottom:4px; }
+    .timeline-title { font-size:1.05rem; font-weight:600; color:#2D3436; margin-bottom:6px; }
+    .timeline-desc { font-size:0.9rem; color:#636E72; line-height:1.7; }
+    .cert-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px; margin-top:32px; }
+    .cert-card { background:#fff; border:1.5px solid #E8E8E8; border-radius:16px; padding:28px 20px; text-align:center; transition:all 0.3s; }
+    .cert-card:hover { border-color:#FF6B35; transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,0.08); }
+    .cert-icon { font-size:2.5rem; margin-bottom:12px; }
+    .cert-name { font-family:Poppins; font-weight:600; font-size:0.95rem; color:#2D3436; }
+    .stat-banner { background:linear-gradient(135deg,#FF6B35 0%,#E85A24 100%); border-radius:24px; padding:48px; margin:48px 0; display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center; color:#fff; }
+    .stat-banner .num { font-family:Poppins; font-size:2.4rem; font-weight:700; line-height:1; margin-bottom:6px; }
+    .stat-banner .lbl { font-size:0.82rem; opacity:0.85; text-transform:uppercase; letter-spacing:1px; }
+    @media(max-width:768px) { .stat-banner { grid-template-columns:1fr 1fr; padding:32px 24px; } }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -23,297 +43,123 @@
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="header-actions">
-        <a href="inquiry.html" class="cart-btn" title="My Inquiry">
-          <i data-lucide="shopping-cart"></i>
-          <span class="cart-badge" id="cartBadge" style="display:none;">0</span>
-        </a>
+        <a href="inquiry.html" class="cart-btn" title="My Inquiry"><i data-lucide="shopping-cart"></i><span class="cart-badge" id="cartBadge" style="display:none;">0</span></a>
         <a href="products.html" class="btn btn-primary btn-sm">Start Sourcing</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section style="margin-top:70px;background:linear-gradient(135deg,#1a1a2e 0%,#2D3436 50%,#4A5568 100%);padding:80px 0;text-align:center;position:relative;overflow:hidden;">
-    <div style="position:absolute;inset:0;opacity:0.05;background-image:radial-gradient(circle at 20% 50%,#FF6B35 0%,transparent 50%),radial-gradient(circle at 80% 20%,#FF9B6A 0%,transparent 40%);"></div>
-    <div class="container" style="position:relative;z-index:1;">
-      <div style="font-size:11px;color:#FF9B6A;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;">About Us</div>
-      <h1 style="font-family:'Poppins',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:#fff;max-width:800px;margin:0 auto 20px;line-height:1.2;">
-        From a Single Apartment in Hefei<br>to 20+ Countries Worldwide
-      </h1>
-      <p style="color:rgba(255,255,255,0.75);max-width:600px;margin:0 auto;font-size:1.05rem;line-height:1.7;">
-        Founded in 2012 by Mr. Zhang Liaoyuan, Three Squirrels has grown into China's #1 nut and snack brand, listed on Shenzhen Stock Exchange (Stock Code: 300783).
-      </p>
+  <div class="page-hero">
+    <div class="container" style="position:relative;">
+      <h1>Our Story</h1>
+      <p>From a small apartment in Hefei to 20+ countries — a decade of bold moves</p>
     </div>
-  </section>
+  </div>
 
-  <!-- COMPANY STORY -->
-  <section class="section">
-    <div class="container" style="max-width:960px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;">
-        <div>
-          <div style="font-size:11px;color:#FF6B35;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Our Story</div>
-          <h2 style="font-family:'Poppins',sans-serif;font-size:1.8rem;font-weight:700;color:#2D3436;margin-bottom:20px;line-height:1.3;">
-            A Humble Beginning,<br>An Extraordinary Vision
-          </h2>
-          <p style="color:#636E72;line-height:1.9;margin-bottom:16px;font-size:0.95rem;">
-            Three Squirrels was founded in <strong>2012</strong> by Mr. Zhang Liaoyuan in Hefei, Anhui Province — starting from a small apartment with just 5 employees and a bold ambition: to build China's own world-class snack food brand.
-          </p>
-          <p style="color:#636E72;line-height:1.9;margin-bottom:24px;font-size:0.95rem;">
-            In just <strong>2 years</strong>, we became the first nut brand on Tmall to exceed <strong>100 million RMB</strong> in annual sales. In <strong>2019</strong>, Three Squirrels was listed on the Shenzhen Stock Exchange ChiNext Board (<strong>Stock Code: 300783</strong>), raising over 600 million RMB. Today, we operate 5 production bases, employ 3,000+ people, and serve distributors in over <strong>20 countries</strong> across 5 continents.
-          </p>
-          <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;">
-            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:#2D3436;">
-              <i data-lucide="check-circle" style="width:18px;height:18px;color:#00B894;"></i> ISO 9001 Certified
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:#2D3436;">
-              <i data-lucide="check-circle" style="width:18px;height:18px;color:#00B894;"></i> ISO 22000 Certified
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:#2D3436;">
-              <i data-lucide="check-circle" style="width:18px;height:18px;color:#00B894;"></i> FDA Registered
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;color:#2D3436;">
-              <i data-lucide="check-circle" style="width:18px;height:18px;color:#00B894;"></i> HALAL Certified
-            </div>
-          </div>
+  <div class="section">
+    <div class="container" style="max-width:900px;">
+      <h2 style="font-family:Poppins;font-size:1.6rem;font-weight:700;color:#2D3436;margin-bottom:40px;text-align:center;">Company Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2012</div>
+          <div class="timeline-title">The Spark — Hefei, Anhui</div>
+          <div class="timeline-desc">Zhang Liaoyuan (Zhang Liaoyuan) founded Three Squirrels in a small apartment with 5 employees and a big vision: to build China's own world-class snack brand.</div>
         </div>
-        <div style="position:relative;">
-          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&auto=format&fit=crop&q=80" alt="Three Squirrels headquarters" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.12);">
-          <div style="position:absolute;bottom:-16px;left:-16px;background:#FF6B35;color:#fff;border-radius:16px;padding:20px;max-width:220px;box-shadow:0 8px 24px rgba(255,107,53,0.35);">
-            <div style="font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:700;line-height:1;">20+</div>
-            <div style="font-size:0.82rem;opacity:0.9;margin-top:4px;">Countries & Regions</div>
-          </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2014</div>
+          <div class="timeline-title">First Million — Tmall Record</div>
+          <div class="timeline-desc">Just 2 years after launch, Three Squirrels became the <strong>first nut brand on Tmall</strong> to exceed 100 million RMB in annual sales.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-title">National Expansion</div>
+          <div class="timeline-desc">Opened 5 regional distribution centers across China. Expanded product line to 30+ SKUs including dried fruits and sea snacks.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2016</div>
+          <div class="timeline-title">Overseas Ambitions Begin</div>
+          <div class="timeline-desc">First export orders to Southeast Asia. Obtained ISO 22000 and HACCP food safety certifications.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-title">Listed on Shenzhen Stock Exchange</div>
+          <div class="timeline-desc"><strong>July 12, 2019</strong> — Three Squirrels went public on the Shenzhen ChiNext Board. Stock Code: <strong>300783</strong>. Raised ~$100M in the IPO.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2020 – Today</div>
+          <div class="timeline-title">Global Growth</div>
+          <div class="timeline-desc">5 production bases, 200,000+ sqm, 3,000+ employees. Exporting to 20+ countries. FDA registered, HALAL certified for international markets.</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- TIMELINE -->
-  <section class="section" style="background:#FAFBFC;">
+  <div class="section" style="background:#FAFBFC;">
     <div class="container">
-      <div class="section-header">
-        <div class="section-title">Our Journey</div>
-        <p class="section-desc">From 5 employees in one apartment to a global brand — our milestones</p>
+      <div style="text-align:center;margin-bottom:12px;">
+        <div style="font-size:11px;color:#FF6B35;font-weight:700;letter-spacing:2px;text-transform:uppercase;">By the Numbers</div>
+        <h2 style="font-family:Poppins;font-size:1.6rem;font-weight:700;color:#2D3436;margin-top:8px;">Three Squirrels at a Glance</h2>
       </div>
-      <div style="max-width:760px;margin:0 auto;">
-        <div style="position:relative;padding-left:40px;border-left:3px solid #FF6B35;">
-          <div style="margin-bottom:32px;position:relative;">
-            <div style="position:absolute;left:-49px;width:20px;height:20px;background:#FF6B35;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px #FF6B35;"></div>
-            <div style="font-size:0.75rem;font-weight:700;color:#FF6B35;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">2012</div>
-            <h3 style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:600;color:#2D3436;margin-bottom:6px;">Founded in Hefei, Anhui</h3>
-            <p style="font-size:0.88rem;color:#636E72;line-height:1.7;">Mr. Zhang Liaoyuan founded Three Squirrels with a team of 5 people and a vision to create China's leading snack brand.</p>
-          </div>
-          <div style="margin-bottom:32px;position:relative;">
-            <div style="position:absolute;left:-49px;width:20px;height:20px;background:#FF6B35;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px #FF6B35;"></div>
-            <div style="font-size:0.75rem;font-weight:700;color:#FF6B35;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">2014</div>
-            <h3 style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:600;color:#2D3436;margin-bottom:6px;">China's First 100M RMB Nut Brand on Tmall</h3>
-            <p style="font-size:0.88rem;color:#636E72;line-height:1.7;">Three Squirrels became the first nut brand on Alibaba Tmall to exceed 100 million RMB in annual sales — a record in China's snack industry.</p>
-          </div>
-          <div style="margin-bottom:32px;position:relative;">
-            <div style="position:absolute;left:-49px;width:20px;height:20px;background:#FF6B35;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px #FF6B35;"></div>
-            <div style="font-size:0.75rem;font-weight:700;color:#FF6B35;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">2015</div>
-            <h3 style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:600;color:#2D3436;margin-bottom:6px;">Series C Funding from IDG Capital</h3>
-            <p style="font-size:0.88rem;color:#636E72;line-height:1.7;">Secured major investment from IDG Capital, accelerating offline expansion and brand building nationwide.</p>
-          </div>
-          <div style="margin-bottom:32px;position:relative;">
-            <div style="position:absolute;left:-49px;width:20px;height:20px;background:#FF6B35;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px #FF6B35;"></div>
-            <div style="font-size:0.75rem;font-weight:700;color:#FF6B35;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">2016</div>
-            <h3 style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:600;color:#2D3436;margin-bottom:6px;">"Fulfill Dreams" Public Welfare Program</h3>
-            <p style="font-size:0.88rem;color:#636E72;line-height:1.7;">Launched our flagship CSR initiative, contributing to education development in rural China.</p>
-          </div>
-          <div style="margin-bottom:32px;position:relative;">
-            <div style="position:absolute;left:-49px;width:20px;height:20px;background:#FF6B35;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px #FF6B35;"></div>
-            <div style="font-size:0.75rem;font-weight:700;color:#FF6B35;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">2019 — Jul 12</div>
-            <h3 style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:600;color:#2D3436;margin-bottom:6px;">Listed on Shenzhen Stock Exchange (300783)</h3>
-            <p style="font-size:0.88rem;color:#636E72;line-height:1.7;">Went public on the Shenzhen ChiNext Board, raising over 600 million RMB. Peak market cap exceeded 20 billion RMB.</p>
-          </div>
-          <div style="margin-bottom:32px;position:relative;">
-            <div style="position:absolute;left:-49px;width:20px;height:20px;background:#FF6B35;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px #FF6B35;"></div>
-            <div style="font-size:0.75rem;font-weight:700;color:#FF6B35;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">2020</div>
-            <h3 style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:600;color:#2D3436;margin-bottom:6px;">International Expansion — Three Squirrels Overseas</h3>
-            <p style="font-size:0.88rem;color:#636E72;line-height:1.7;">Established dedicated overseas division. Obtained FDA, HALAL certifications for international markets. Expanded to 20+ countries.</p>
-          </div>
-          <div style="position:relative;">
-            <div style="position:absolute;left:-49px;width:20px;height:20px;background:#00B894;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px #00B894;"></div>
-            <div style="font-size:0.75rem;font-weight:700;color:#00B894;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Today</div>
-            <h3 style="font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:600;color:#2D3436;margin-bottom:6px;">Serving Distributors in 20+ Countries</h3>
-            <p style="font-size:0.88rem;color:#636E72;line-height:1.7;">With 100+ SKUs, 5 production bases, and a team of 3,000+, Three Squirrels continues to grow as a globally recognized Chinese snack brand.</p>
-          </div>
-        </div>
+      <div class="stat-banner">
+        <div><div class="num">2012</div><div class="lbl">Founded</div></div>
+        <div><div class="num">300783</div><div class="lbl">SSE Stock Code</div></div>
+        <div><div class="num">100+</div><div class="lbl">Product SKUs</div></div>
+        <div><div class="num">20+</div><div class="lbl">Export Countries</div></div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- NUMBERS -->
-  <section class="stats">
+  <div class="section">
     <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-num">2012</div>
-          <div class="stat-label">Year Founded</div>
+      <h2 style="font-family:Poppins;font-size:1.6rem;font-weight:700;color:#2D3436;margin-bottom:32px;text-align:center;">Certifications & Compliance</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-icon">🏭</div>
+          <div class="cert-name">ISO 9001</div>
+          <div style="font-size:0.8rem;color:#636E72;margin-top:4px;">Quality Management</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-num">100+</div>
-          <div class="stat-label">Product SKUs</div>
+        <div class="cert-card">
+          <div class="cert-icon">🍽️</div>
+          <div class="cert-name">ISO 22000</div>
+          <div style="font-size:0.8rem;color:#636E72;margin-top:4px;">Food Safety</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-num">20+</div>
-          <div class="stat-label">Export Countries</div>
+        <div class="cert-card">
+          <div class="cert-icon">🛡️</div>
+          <div class="cert-name">HACCP</div>
+          <div style="font-size:0.8rem;color:#636E72;margin-top:4px;">Hazard Control</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-num">300783</div>
-          <div class="stat-label">SSE Stock Code</div>
+        <div class="cert-card">
+          <div class="cert-icon">🌍</div>
+          <div class="cert-name">FDA</div>
+          <div style="font-size:0.8rem;color:#636E72;margin-top:4px;">US FDA Registered</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">☪️</div>
+          <div class="cert-name">HALAL</div>
+          <div style="font-size:0.8rem;color:#636E72;margin-top:4px;">HALAL Certified</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- CERTIFICATIONS -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-title">Certifications & Quality Standards</div>
-        <p class="section-desc">Meeting international food safety standards for global markets</p>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:900px;margin:0 auto;">
-        <div style="background:#fff;border:2px solid #E8E8E8;border-radius:16px;padding:28px 20px;text-align:center;transition:all 0.2s;">
-          <div style="font-size:2.2rem;margin-bottom:12px;">🏭</div>
-          <div style="font-weight:700;font-size:0.9rem;color:#2D3436;margin-bottom:4px;">ISO 9001</div>
-          <div style="font-size:0.75rem;color:#636E72;">Quality Management System</div>
-        </div>
-        <div style="background:#fff;border:2px solid #E8E8E8;border-radius:16px;padding:28px 20px;text-align:center;transition:all 0.2s;">
-          <div style="font-size:2.2rem;margin-bottom:12px;">🔬</div>
-          <div style="font-weight:700;font-size:0.9rem;color:#2D3436;margin-bottom:4px;">ISO 22000</div>
-          <div style="font-size:0.75rem;color:#636E72;">Food Safety Management</div>
-        </div>
-        <div style="background:#fff;border:2px solid #E8E8E8;border-radius:16px;padding:28px 20px;text-align:center;transition:all 0.2s;">
-          <div style="font-size:2.2rem;margin-bottom:12px;">🕌</div>
-          <div style="font-weight:700;font-size:0.9rem;color:#2D3436;margin-bottom:4px;">HALAL</div>
-          <div style="font-size:0.75rem;color:#636E72;">Muslim Market Certified</div>
-        </div>
-        <div style="background:#fff;border:2px solid #E8E8E8;border-radius:16px;padding:28px 20px;text-align:center;transition:all 0.2s;">
-          <div style="font-size:2.2rem;margin-bottom:12px;">🌍</div>
-          <div style="font-weight:700;font-size:0.9rem;color:#2D3436;margin-bottom:4px;">FDA Registered</div>
-          <div style="font-size:0.75rem;color:#636E72;">US Export Compliant</div>
-        </div>
-      </div>
+  <div class="section" style="background:#FAFBFC;">
+    <div class="container" style="max-width:800px;text-align:center;">
+      <h2 style="font-family:Poppins;font-size:1.6rem;font-weight:700;color:#2D3436;margin-bottom:20px;">Message from Our Founder</h2>
+      <blockquote style="font-size:1.05rem;color:#636E72;line-height:1.9;font-style:italic;border-left:4px solid #FF6B35;padding-left:24px;text-align:left;margin:0;">
+        "When we started in 2012, everyone said the Chinese snack market was dominated by giants. We believed that with the right products, the right team, and the right values, we could build something truly global. Today, Three Squirrels is in millions of homes across China and around the world — and we're just getting started."
+      </blockquote>
+      <div style="margin-top:20px;font-weight:600;color:#2D3436;">— Zhang Liaoyuan, Founder & CEO</div>
+      <div style="margin-top:6px;font-size:0.85rem;color:#636E72;">Stock Code: 300783 | Shenzhen Stock Exchange</div>
     </div>
-  </section>
-
-  <!-- WHY DISTRIBUTORS CHOOSE US -->
-  <section class="section" style="background:#FAFBFC;">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-title">Why Distributors Choose Three Squirrels</div>
-        <p class="section-desc">Trusted by importers and wholesalers in 20+ countries</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon"><i data-lucide="shield-check" style="width:36px;height:36px;color:#FF6B35;"></i></div>
-          <h3>Complete Quality Control</h3>
-          <p>From raw material sourcing to final packaging, every batch undergoes 18 quality inspection points. ISO 9001, ISO 22000, HACCP, FDA, and HALAL certified.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon"><i data-lucide="truck" style="width:36px;height:36px;color:#FF6B35;"></i></div>
-          <h3>Reliable Supply Chain</h3>
-          <p>5 production bases across China with 50,000+ sqm warehousing. Flexible MOQ from 100 units for trial, with consistent bulk supply thereafter.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon"><i data-lucide="globe" style="width:36px;height:36px;color:#FF6B35;"></i></div>
-          <h3>Proven Export Experience</h3>
-          <p>Experienced export team familiar with customs clearance, documentation, and regulations in North America, Europe, Southeast Asia, Middle East and beyond.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon"><i data-lucide="package" style="width:36px;height:36px;color:#FF6B35;"></i></div>
-          <h3>Flexible Packaging</h3>
-          <p>Customizable packaging sizes, bilingual labels (English/Chinese), compliant with local market regulations. Retail, wholesale, and foodservice formats.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon"><i data-lucide="heart-handshake" style="width:36px;height:36px;color:#FF6B35;"></i></div>
-          <h3>Long-term Partnership</h3>
-          <p>We view every distributor as a partner. Competitive export pricing, marketing support, and a dedicated English-speaking account manager.</p>
-        </div>
-        <div class="why-card">
-          <div class="why-icon"><i data-lucide="zap" style="width:36px;height:36px;color:#FF6B35;"></i></div>
-          <h3>Fast Response</h3>
-          <p>Dedicated overseas sales team responds to inquiries within 24 hours. Sample orders ship within 5 business days.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CHAIRMAN MESSAGE -->
-  <section class="section">
-    <div class="container" style="max-width:860px;">
-      <div style="background:#fff;border:2px solid #E8E8E8;border-radius:24px;padding:48px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;">
-        <div style="width:100px;height:100px;background:linear-gradient(135deg,#FF6B35,#FF9B6A);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 8px 24px rgba(255,107,53,0.3);">ZL</div>
-        <div>
-          <div style="font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:700;color:#2D3436;margin-bottom:4px;">Mr. Zhang Liaoyuan</div>
-          <div style="font-size:0.8rem;color:#FF6B35;font-weight:600;margin-bottom:16px;">Founder & Chairman, Three Squirrels</div>
-          <p style="font-size:0.92rem;color:#636E72;line-height:1.8;font-style:italic;">
-            "Three Squirrels started with a simple belief: that China's excellent snack culture deserves a place on every table around the world. Every nut we export carries our commitment to quality, and every partnership we build is grounded in mutual growth. We look forward to growing together with distributors who share our vision."
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTION BASE -->
-  <section style="background:#2D3436;padding:80px 0;">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-        <div>
-          <div style="font-size:11px;color:#FF9B6A;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;">Production Capacity</div>
-          <h2 style="font-family:'Poppins',sans-serif;font-size:2rem;font-weight:700;color:#fff;margin-bottom:20px;line-height:1.3;">Smart Factories, World-Class Quality</h2>
-          <p style="color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:24px;">Three Squirrels operates 5 automated production bases across Anhui and Jiangsu provinces, with a total floor area exceeding 200,000 sqm. Our smart factories use German KUKA robotics and Japanese packaging lines to ensure consistent quality at scale.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-            <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:16px;">
-              <div style="font-size:1.8rem;font-weight:700;color:#FF6B35;">200,000㎡</div>
-              <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);">Production Floor Area</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:16px;">
-              <div style="font-size:1.8rem;font-weight:700;color:#FF6B35;">5</div>
-              <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);">Production Bases</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:16px;">
-              <div style="font-size:1.8rem;font-weight:700;color:#FF6B35;">3,000+</div>
-              <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);">Employees</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:16px;">
-              <div style="font-size:1.8rem;font-weight:700;color:#FF6B35;">18</div>
-              <div style="font-size:0.8rem;color:rgba(255,255,255,0.6);">QC Inspection Points</div>
-            </div>
-          </div>
-        </div>
-        <div style="border-radius:20px;overflow:hidden;aspect-ratio:4/3;">
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&auto=format&fit=crop&q=80" alt="Three Squirrels Production Facility" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Ready to Source Premium Chinese Snacks?</h2>
-        <p>Browse our product catalog, submit your first inquiry, and let our team craft a custom quote for your market.</p>
-        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-          <a href="products.html" class="btn btn-orange btn-lg">View Products</a>
-          <a href="contact.html" class="btn btn-outline-white btn-lg">Contact Sales</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <footer class="footer">
     <div class="container">
-      <div class="footer-bottom" style="border:none;padding:0;text-align:center;">
-        <p>© 2026 Three Squirrels Overseas. All rights reserved. | Stock Code: 300783</p>
+      <div class="footer-bottom">
+        <p>© 2026 Three Squirrels Overseas. All rights reserved. | Stock Code: 300783 | Shenzhen Stock Exchange</p>
       </div>
     </div>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => { lucide.createIcons(); updateCartBadge(); });
-  </script>
+  <script>document.addEventListener('DOMContentLoaded',()=>{lucide.createIcons();updateCartBadge();});</script>
 </body>
 </html>
