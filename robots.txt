@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://3songshu.github.io/three-squirrels-overseas/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
