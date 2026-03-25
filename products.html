@@ -4,15 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>产品中心 — 三只松鼠海外官网</title>
-<meta name="description" content="三只松鼠优质坚果出口全球50余国。HALAL/FDA/ISO 22000认证。">
-<meta property="og:title" content="产品中心 — 三只松鼠海外官网">
+<meta name="description" content="三只松鼠坚果产品出口全球50余国。碧根果、夏威夷果、腰果、巴旦木、开心果等，HALAL/FDA/ISO认证。">
 <link rel="canonical" href="https://3songshu.github.io/three-squirrels-overseas/products.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
 <link rel="stylesheet" href="css/styles.css">
+<style>
+.cat-section{padding:56px 0;border-bottom:1px solid var(--border);}
+.cat-section:last-child{border-bottom:none;}
+.cat-header{display:flex;align-items:center;gap:16px;margin-bottom:32px;}
+.cat-icon{font-size:2.2rem;width:52px;height:52px;background:var(--primary-lt);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cat-title{font-family:'Noto Sans SC',sans-serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:800;color:var(--text-h);margin-bottom:4px;}
+.cat-desc{font-family:'Noto Sans SC',sans-serif;font-size:0.88rem;color:var(--text-s);}
+.p-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;}
+.p-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all 0.22s;}
+.p-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.09);border-color:var(--primary);}
+.p-emoji-wrap{background:linear-gradient(135deg,#E63946,#C1121F);aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:3.5rem;}
+.p-body{padding:16px;}
+.p-name{font-family:'Noto Sans SC',sans-serif;font-weight:700;color:var(--text-h);font-size:0.92rem;margin-bottom:6px;line-height:1.4;}
+.p-spec{font-size:0.78rem;color:var(--text-s);margin-bottom:10px;line-height:1.5;}
+.p-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px;}
+.p-tag{padding:2px 9px;border-radius:50px;font-size:0.68rem;font-weight:700;font-family:'Poppins',sans-serif;}
+.hal{background:#FFF3E0;color:#E65100;}
+.fda{background:#E3F2FD;color:#1565C0;}
+.p-btn{display:block;text-align:center;background:var(--primary);color:#fff;border-radius:8px;font-family:'Noto Sans SC',sans-serif;font-size:0.8rem;font-weight:700;padding:8px 12px;text-decoration:none;transition:background 0.2s;}
+.p-btn:hover{background:#C1121F;}
+@media(max-width:640px){.cat-header{flex-direction:column;align-items:flex-start;}.p-grid{grid-template-columns:repeat(2,1fr);gap:10px;}}
+</style>
 </head>
 <body>
+
 <header class="header" id="header">
   <div class="header-inner">
     <a href="index.html"><img src="images/logo.png" alt="三只松鼠" class="logo-img"></a>
@@ -27,6 +49,7 @@
     </div>
   </div>
 </header>
+
 <section style="position:relative;min-height:480px;display:flex;align-items:center;overflow:hidden;">
   <div style="position:absolute;inset:0;z-index:0;">
     <img src="images/banner-hero.jpg" alt="三只松鼠" style="width:100%;height:100%;object-fit:cover;" loading="eager">
@@ -36,46 +59,683 @@
     <div style="max-width:600px;">
       <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(230,57,70,0.85);color:#fff;padding:5px 14px;border-radius:50px;font-size:0.75rem;font-weight:700;letter-spacing:0.5px;margin-bottom:20px;backdrop-filter:blur(4px);">精选好坚果 · 全球出口</div>
       <h1 style="font-family:'Noto Sans SC',sans-serif;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:700;color:#fff;line-height:1.3;margin-bottom:12px;">产品中心</h1>
-      <p style="font-family:'Noto Sans SC',sans-serif;font-size:1rem;color:rgba(255,255,255,0.8);line-height:1.7;margin:0;">优质坚果、 authentic 中国风味，出口全球 50 余个国家</p>
+      <p style="font-family:'Noto Sans SC',sans-serif;font-size:1rem;color:rgba(255,255,255,0.8);line-height:1.7;margin:0;">共38款坚果产品，出口全球50余个国家</p>
     </div>
   </div>
 </section>
-<section style="padding:72px 0;background:var(--bg);">
+
+<section style="padding:0 0 48px;background:var(--bg);">
   <div class="container">
-    <div style="text-align:center;margin-bottom:48px;">
-      <div style="display:inline-flex;align-items:center;gap:6px;background:var(--primary-lt);color:var(--primary);padding:5px 14px;border-radius:50px;font-size:0.78rem;font-weight:700;margin-bottom:14px;"><i data-lucide="package" style="width:12px;height:12px;"></i> 全部产品</div>
-      <h2 style="font-family:'Noto Sans SC',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:var(--text-h);margin-bottom:8px;">精选优质原料，匠心烘焙</h2>
-      <p style="color:var(--text-s);font-size:0.95rem;">出口全球 50 余个国家，HALAL / FDA / ISO 22000 多重认证</p>
+    <div style="text-align:center;padding:36px 0 8px;">
+      <p style="font-family:'Noto Sans SC',sans-serif;font-size:0.85rem;color:var(--text-s);">HALAL · FDA · ISO 22000 · HACCP 多重认证 | 远销全球50余国</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-      <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'"><div style="height:160px;background:linear-gradient(135deg,#E63946,#C1121F);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🌰</div><div style="padding:18px;"><h3 style="font-family:'Noto Sans SC',sans-serif;font-weight:700;color:var(--text-h);margin-bottom:5px;">碧根果 Pecan</h3><p style="font-size:0.78rem;color:var(--text-s);margin-bottom:10px;line-height:1.6;">精选美国进口，奶油香气，精致烘焙</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;"><span style="background:var(--primary-lt);color:var(--primary);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">HALAL</span><span style="background:var(--accent-lt);color:var(--accent);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">FDA</span></div><a href="contact.html" style="color:var(--primary);font-weight:700;font-size:0.8rem;text-decoration:none;">获取报价 →</a></div></div>
-      <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'"><div style="height:160px;background:linear-gradient(135deg,#FF7A2F,#E05500);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🦘</div><div style="padding:18px;"><h3 style="font-family:'Noto Sans SC',sans-serif;font-weight:700;color:var(--text-h);margin-bottom:5px;">夏威夷果 Macadamia</h3><p style="font-size:0.78rem;color:var(--text-s);margin-bottom:10px;line-height:1.6;">澳洲进口，奶香浓郁，颗颗精选</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;"><span style="background:var(--primary-lt);color:var(--primary);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">HALAL</span><span style="background:var(--accent-lt);color:var(--accent);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">FDA</span></div><a href="contact.html" style="color:var(--primary);font-weight:700;font-size:0.8rem;text-decoration:none;">获取报价 →</a></div></div>
-      <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'"><div style="height:160px;background:linear-gradient(135deg,#8B6914,#4A3000);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🥜</div><div style="padding:18px;"><h3 style="font-family:'Noto Sans SC',sans-serif;font-weight:700;color:var(--text-h);margin-bottom:5px;">每日混合坚果</h3><p style="font-size:0.78rem;color:var(--text-s);margin-bottom:10px;line-height:1.6;">多种坚果科学配比，健康美味，开袋即食</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;"><span style="background:var(--primary-lt);color:var(--primary);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">HALAL</span><span style="background:var(--accent-lt);color:var(--accent);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">ISO</span></div><a href="contact.html" style="color:var(--primary);font-weight:700;font-size:0.8rem;text-decoration:none;">获取报价 →</a></div></div>
-      <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'"><div style="height:160px;background:linear-gradient(135deg,#E63946,#FF7A2F);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🍬</div><div style="padding:18px;"><h3 style="font-family:'Noto Sans SC',sans-serif;font-weight:700;color:var(--text-h);margin-bottom:5px;">零食大礼包 节日礼盒</h3><p style="font-size:0.78rem;color:var(--text-s);margin-bottom:10px;line-height:1.6;">精选组合，节日馈赠佳品，中国特色礼品</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;"><span style="background:var(--primary-lt);color:var(--primary);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">OEM</span><span style="background:var(--accent-lt);color:var(--accent);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">定制</span></div><a href="contact.html" style="color:var(--primary);font-weight:700;font-size:0.8rem;text-decoration:none;">获取报价 →</a></div></div>
-      <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'"><div style="height:160px;background:linear-gradient(135deg,#FF7A2F,#E63946);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🥜</div><div style="padding:18px;"><h3 style="font-family:'Noto Sans SC',sans-serif;font-weight:700;color:var(--text-h);margin-bottom:5px;">腰果 Cashew</h3><p style="font-size:0.78rem;color:var(--text-s);margin-bottom:10px;line-height:1.6;">越南进口，酥脆口感，精致烘焙工艺</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;"><span style="background:var(--primary-lt);color:var(--primary);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">HALAL</span><span style="background:var(--accent-lt);color:var(--accent);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">FDA</span></div><a href="contact.html" style="color:var(--primary);font-weight:700;font-size:0.8rem;text-decoration:none;">获取报价 →</a></div></div>
-      <div style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all 0.25s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'"><div style="height:160px;background:linear-gradient(135deg,#333,#1a1a1a);display:flex;align-items:center;justify-content:center;font-size:3.5rem;">🎁</div><div style="padding:18px;"><h3 style="font-family:'Noto Sans SC',sans-serif;font-weight:700;color:var(--text-h);margin-bottom:5px;">企业定制礼盒</h3><p style="font-size:0.78rem;color:var(--text-s);margin-bottom:10px;line-height:1.6;">Logo定制，包装定制，最低500盒起订</p><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;"><span style="background:var(--primary-lt);color:var(--primary);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">OEM</span><span style="background:var(--accent-lt);color:var(--accent);padding:2px 8px;border-radius:50px;font-size:0.68rem;font-weight:700;">定制</span></div><a href="contact.html" style="color:var(--primary);font-weight:700;font-size:0.8rem;text-decoration:none;">获取报价 →</a></div></div>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:8px;">
+      <a href="#small" style="padding:6px 16px;background:var(--primary);color:#fff;border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">袋装坚果</a>
+      <a href="#bulk" style="padding:6px 16px;background:#fff;color:var(--text-h);border:1.5px solid var(--border);border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">经济装</a>
+      <a href="#can" style="padding:6px 16px;background:#fff;color:var(--text-h);border:1.5px solid var(--border);border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">罐装礼盒</a>
+      <a href="#flavor" style="padding:6px 16px;background:#fff;color:var(--text-h);border:1.5px solid var(--border);border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">风味坚果</a>
+      <a href="#daily" style="padding:6px 16px;background:#fff;color:var(--text-h);border:1.5px solid var(--border);border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">每日坚果</a>
+    </div>
+
+    <div class="cat-section" id="small">
+      <div class="cat-header">
+        <div class="cat-icon">🛒</div>
+        <div>
+          <h2 class="cat-title">袋装坚果（小包装）</h2>
+          <p class="cat-desc">22g ~ 150g 小包装，开袋即食，适合零售陈列</p>
+        </div>
+      </div>
+      <div class="p-grid">
+        
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌰</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">开心果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pistachio</span></h3>
+          <p class="p-spec">22g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🥜</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">紫皮腰果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Purple Cashew</span></h3>
+          <p class="p-spec">30g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌱</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">手剥巴旦木 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Almond</span></h3>
+          <p class="p-spec">35g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🦘</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">夏威夷果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Macadamia</span></h3>
+          <p class="p-spec">50g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌰</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">碧根果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pecan</span></h3>
+          <p class="p-spec">55g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌱</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">手剥巴旦木 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Almond</span></h3>
+          <p class="p-spec">120g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🦘</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">夏威夷果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Macadamia</span></h3>
+          <p class="p-spec">100g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🥜</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">紫皮腰果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Purple Cashew</span></h3>
+          <p class="p-spec">120g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌰</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">碧根果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pecan</span></h3>
+          <p class="p-spec">120g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌰</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">开心果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pistachio</span></h3>
+          <p class="p-spec">100g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🥜</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">炭烧腰果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Charred Cashew</span></h3>
+          <p class="p-spec">120g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌰</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">奶香烤核桃 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Roasted Walnut</span></h3>
+          <p class="p-spec">150g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="cat-section" id="bulk">
+      <div class="cat-header">
+        <div class="cat-icon">📦</div>
+        <div>
+          <h2 class="cat-title">经济装（500g大袋）</h2>
+          <p class="cat-desc">500g 大袋装，LF认证，适合批发和分销</p>
+        </div>
+      </div>
+      <div class="p-grid">
+        
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🦘</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">夏威夷果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Macadamia</span></h3>
+          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌱</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">手剥巴旦木 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Almond</span></h3>
+          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🥜</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">紫皮腰果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Purple Cashew</span></h3>
+          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌲</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">开口松子 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pine Nut</span></h3>
+          <p class="p-spec">500g/袋（LF） · 保质期 6个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌰</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">碧根果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pecan</span></h3>
+          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌰</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">开心果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pistachio</span></h3>
+          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="cat-section" id="can">
+      <div class="cat-header">
+        <div class="cat-icon">🎁</div>
+        <div>
+          <h2 class="cat-title">罐装坚果礼盒</h2>
+          <p class="cat-desc">精美罐装，适合节日送礼和企业采购</p>
+        </div>
+      </div>
+      <div class="p-grid">
+        
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🦘</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">罐装夏威夷果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Macadamia Gift Can</span></h3>
+          <p class="p-spec">450g/罐 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌱</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">罐装手剥巴旦木 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Almond Gift Can</span></h3>
+          <p class="p-spec">370g/罐 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🥜</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">罐装紫皮腰果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Purple Cashew Gift Can</span></h3>
+          <p class="p-spec">400g/罐 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌰</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">罐装碧根果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pecan Gift Can</span></h3>
+          <p class="p-spec">400g/罐 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌰</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">罐装开心果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pistachio Gift Can</span></h3>
+          <p class="p-spec">430g/罐 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="cat-section" id="flavor">
+      <div class="cat-header">
+        <div class="cat-icon">🌈</div>
+        <div>
+          <h2 class="cat-title">风味坚果</h2>
+          <p class="cat-desc">芥末、蜂蜜黄油、椰香、香辣、蟹黄等多口味</p>
+        </div>
+      </div>
+      <div class="p-grid">
+        
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🍯</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">蜂蜜黄油味巴旦木仁 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Honey Butter Almond</span></h3>
+          <p class="p-spec">60g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🦘</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">芥末味夏威夷果仁 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Wasabi Macadamia</span></h3>
+          <p class="p-spec">75g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🦘</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">夏威夷果仁（芥末味） <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Wasabi Macadamia Nut</span></h3>
+          <p class="p-spec">60g/袋 · 保质期 9个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🥥</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">夏威夷果仁（椰香味） <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Coconut Macadamia Nut</span></h3>
+          <p class="p-spec">65g/袋 · 保质期 9个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🌶️</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">风味核桃仁（香辣味） <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Spicy Walnut</span></h3>
+          <p class="p-spec">25g/袋 · 保质期 6个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🦀</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">风味腰果仁（蟹黄味） <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Crab Flavor Cashew</span></h3>
+          <p class="p-spec">25g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="cat-section" id="daily">
+      <div class="cat-header">
+        <div class="cat-icon">💚</div>
+        <div>
+          <h2 class="cat-title">每日坚果 / 混合坚果</h2>
+          <p class="cat-desc">科学配比多种坚果，每日营养搭配，出口全球50余国</p>
+        </div>
+      </div>
+      <div class="p-grid">
+        
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🍘</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">混合坚果海苔薄脆 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Mixed Nuts Seaweed Crisps</span></h3>
+          <p class="p-spec">20g/袋 · 保质期 12个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🍘</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">扁桃仁海苔薄脆 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Almond Seaweed Crisps</span></h3>
+          <p class="p-spec">20g/袋 · 保质期 12个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🎃</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">南瓜籽仁海苔薄脆 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Pumpkin Seed Seaweed Crisps</span></h3>
+          <p class="p-spec">20g/袋 · 保质期 12个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🥗</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">每日坚果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Daily Mixed Nuts</span></h3>
+          <p class="p-spec">325g+960ml/盒 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">💚</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">每日坚果（元气款） <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Daily Mixed Nuts Vitality</span></h3>
+          <p class="p-spec">750g/袋 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🎁</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">每日坚果4+4礼盒装 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Daily Mixed Nuts 4+4 Gift Box</span></h3>
+          <p class="p-spec">750g/盒 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🥜</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">每日坚果（终端装） <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Daily Mixed Nuts Retail</span></h3>
+          <p class="p-spec">500g/袋（4+3*20包） · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">📦</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">袋装每日坚果 <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Daily Mixed Nuts Pack</span></h3>
+          <p class="p-spec">25g×120包/箱 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-emoji-wrap">
+          <div class="p-emoji">🏺</div>
+        </div>
+        <div class="p-body">
+          <h3 class="p-name">罐装每日坚果（定制款） <span style="font-family:Poppins,sans-serif;font-size:0.82em;color:var(--text-s);">Daily Mixed Nuts Custom Can</span></h3>
+          <p class="p-spec">360g×24罐/箱 · 保质期 8个月</p>
+          <div class="p-tags">
+            <span class="p-tag hal">HALAL</span>
+            <span class="p-tag fda">FDA</span>
+          </div>
+          <a href="contact.html" class="p-btn">获取报价 →</a>
+        </div>
+      </div>
+      </div>
     </div>
   </div>
 </section>
+
 <section style="background:linear-gradient(135deg,#E63946,#C1121F);padding:64px 0;text-align:center;">
   <div class="container">
     <h2 style="font-family:'Noto Sans SC',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:#fff;margin-bottom:12px;">获取详细报价和产品目录</h2>
-    <p style="color:rgba(255,255,255,0.78);font-size:0.95rem;margin-bottom:28px;">专属出口经理一对一服务，24小时内回复</p>
+    <p style="color:rgba(255,255,255,0.78);font-family:'Noto Sans SC',sans-serif;font-size:0.95rem;margin-bottom:28px;">专属出口经理一对一服务，24小时内回复</p>
     <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#E63946;border-radius:12px;font-family:'Noto Sans SC',sans-serif;font-size:0.92rem;font-weight:700;padding:13px 28px;text-decoration:none;">联系我们</a>
   </div>
 </section>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand"><img src="images/logo.png" alt="三只松鼠" class="footer-logo"><p>中国领先零食出口品牌，始于2012年。股票代码：300783，深圳证券交易所。HALAL · FDA · ISO 22000认证。</p></div>
       <div><h4>导航</h4><a href="index.html">首页</a><a href="products.html">产品</a><a href="contact.html">联系我们</a></div>
-      <div><h4>产品</h4><a href="products.html">全部产品</a><a href="products.html?cat=nuts">优质坚果</a><a href="products.html?cat=dried">果干</a><a href="products.html?cat=gift">礼盒</a></div>
+      <div><h4>产品</h4><a href="products.html">全部产品</a><a href="products.html#small">袋装坚果</a><a href="products.html#bulk">经济装</a><a href="products.html#daily">每日坚果</a></div>
       <div><h4>联系我们</h4><a href="mailto:overseas@three-squirrels.com">overseas@three-squirrels.com</a><a href="tel:+864008888888">+86 400-888-8888</a><a href="contact.html">获取报价 →</a></div>
     </div>
     <div class="footer-bottom"><p>© 2026 三只松鼠海外官网. All rights reserved. | 股票代码：300783 | 深圳证券交易所</p></div>
   </div>
 </footer>
+
 <script>
-document.addEventListener('DOMContentLoaded',function(){if(window.lucide)lucide.createIcons();window.addEventListener('scroll',function(){var h=document.getElementById('header');if(h)h.classList.toggle('scrolled',window.scrollY>40);});});
+document.addEventListener('DOMContentLoaded',function(){
+  if(window.lucide)lucide.createIcons();
+  window.addEventListener('scroll',function(){
+    var h=document.getElementById('header');
+    if(h)h.classList.toggle('scrolled',window.scrollY>40);
+  });
+});
 </script>
 </body></html>
