@@ -1,665 +1,808 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>产品中心 — 三只松鼠海外官网</title>
-<meta name="description" content="三只松鼠坚果产品出口全球50余国。碧根果、夏威夷果、腰果、巴旦木、开心果等，HALAL/FDA/ISO认证。">
-<link rel="canonical" href="https://3songshu.github.io/three-squirrels-overseas/products.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
-<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-.cat-section{padding:56px 0;border-bottom:1px solid var(--border);}
-.cat-section:last-child{border-bottom:none;}
-.cat-header{display:flex;align-items:center;gap:16px;margin-bottom:32px;}
-.cat-icon{font-size:2.2rem;width:52px;height:52px;background:var(--primary-lt);border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.cat-title{font-family:'Noto Sans SC',sans-serif;font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:800;color:var(--text-h);margin-bottom:4px;}
-.cat-desc{font-family:'Noto Sans SC',sans-serif;font-size:0.88rem;color:var(--text-s);}
-.p-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;}
-.p-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all 0.22s;}
-.p-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.09);border-color:var(--primary);}
-.p-img{aspect-ratio:1;overflow:hidden;background:#f5f5f5;}
-.p-body{padding:14px;}
-.p-name{font-family:'Noto Sans SC',sans-serif;font-weight:700;color:var(--text-h);font-size:0.88rem;margin-bottom:5px;line-height:1.35;}
-.p-spec{font-size:0.75rem;color:var(--text-s);margin-bottom:9px;line-height:1.5;}
-.p-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px;}
-.p-tag{padding:2px 9px;border-radius:50px;font-size:0.68rem;font-weight:700;font-family:'Poppins',sans-serif;}
-.hal{background:#FFF3E0;color:#E65100;}
-.fda{background:#E3F2FD;color:#1565C0;}
-.p-btn{display:block;text-align:center;background:var(--primary);color:#fff;border-radius:8px;font-family:'Noto Sans SC',sans-serif;font-size:0.8rem;font-weight:700;padding:8px 12px;text-decoration:none;transition:background 0.2s;}
-.p-btn:hover{background:#C1121F;}
-@media(max-width:640px){.cat-header{flex-direction:column;align-items:flex-start;}.p-grid{grid-template-columns:repeat(2,1fr);gap:10px;}}
+:root {
+  --primary: #E63946;
+  --accent: #FF7A2F;
+  --bg: #F9F9F6;
+  --text-h: #333;
+  --text-s: #666;
+  --border: #E8E8E8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  background: var(--bg);
+  color: var(--text-h);
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.site-logo img { height: 40px; width: auto; }
+.logo-text { font-size: 1.1rem; font-weight: 800; color: var(--primary); line-height: 1.2; }
+.logo-sub { font-size: 0.7rem; color: var(--text-s); font-weight: 400; }
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.header-nav a {
+  text-decoration: none;
+  color: var(--text-s);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+}
+.header-nav a:hover { color: var(--primary); background: #FFF5F5; }
+.header-nav a.active { color: var(--primary); font-weight: 700; }
+.cart-btn {
+  position: relative;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, transform 0.15s;
+  margin-left: 12px;
+}
+.cart-btn:hover { background: #c9313b; transform: translateY(-1px); }
+#cartBadge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 4px;
+  flex-direction: column;
+  gap: 4px;
+}
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text-h); border-radius: 1px; }
+
+/* Hero */
+.hero { position: relative; height: 320px; background: #1a1a2e; overflow: hidden; }
+.hero img { width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
+.hero-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 20px;
+}
+.hero h1 { color: #fff; font-size: 2.4rem; font-weight: 800; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+.hero p { color: rgba(255,255,255,0.85); font-size: 1.05rem; max-width: 500px; }
+
+/* Category nav pills */
+.cat-nav { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 64px; z-index: 90; }
+.cat-nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 20px;
+  display: flex; gap: 8px;
+  overflow-x: auto; scrollbar-width: none; height: 52px; align-items: center;
+}
+.cat-nav-inner::-webkit-scrollbar { display: none; }
+.cat-pill {
+  flex-shrink: 0; display: inline-block;
+  padding: 5px 16px; border-radius: 20px;
+  font-size: 0.82rem; font-weight: 600; text-decoration: none;
+  color: var(--text-s); background: #f0f0f0;
+  transition: background 0.2s, color 0.2s; border: 1.5px solid transparent;
+}
+.cat-pill:hover { background: #FFE8EA; color: var(--primary); border-color: var(--primary); }
+.cat-pill.active { background: var(--primary); color: #fff; }
+
+/* Main content */
+.main-content { max-width: 1200px; margin: 0 auto; padding: 32px 20px 60px; }
+
+/* Section */
+.section-block { margin-bottom: 56px; }
+.section-title { font-size: 1.3rem; font-weight: 800; color: var(--text-h); margin-bottom: 6px; display: flex; align-items: center; gap: 10px; }
+.section-title::before { content: ''; display: block; width: 4px; height: 24px; background: var(--primary); border-radius: 2px; }
+.section-sub { font-size: 0.82rem; color: var(--text-s); margin-bottom: 20px; padding-left: 14px; }
+
+/* Product grid */
+.p-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+
+/* Product card */
+.p-card {
+  background: #fff; border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.25s, transform 0.25s;
+  display: flex; flex-direction: column;
+}
+.p-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); transform: translateY(-3px); }
+.p-img { width: 100%; aspect-ratio: 1; overflow: hidden; background: #fafafa; }
+.p-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s; }
+.p-card:hover .p-img img { transform: scale(1.04); }
+.p-body { padding: 12px; flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.p-name { font-size: 0.88rem; font-weight: 700; color: var(--text-h); line-height: 1.3; }
+.p-en { font-weight: 400; color: var(--text-s); font-size: 0.78rem; }
+.p-spec { font-size: 0.75rem; color: var(--text-s); margin-bottom: 4px; }
+.p-add-btn {
+  margin-top: auto; padding: 7px 0;
+  background: var(--primary); color: #fff;
+  border: none; border-radius: 8px;
+  font-family: 'Noto Sans SC', sans-serif; font-size: 0.78rem; font-weight: 700;
+  cursor: pointer; width: 100%; transition: background 0.2s;
+}
+.p-add-btn:hover { background: #c9313b; }
+
+/* Footer */
+.site-footer { background: #1a1a2e; color: rgba(255,255,255,0.7); text-align: center; padding: 28px 20px; font-size: 0.8rem; }
+.site-footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+.site-footer a:hover { color: #fff; }
+
+/* Mobile */
+@media (max-width: 640px) {
+  .header-nav { display: none; }
+  .header-nav.open { display: flex; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--border); padding: 12px 20px; z-index: 99; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .hamburger { display: flex; }
+  .hero h1 { font-size: 1.6rem; }
+  .p-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+}
 </style>
 </head>
 <body>
 
-<header class="header" id="header">
+<!-- Header -->
+<header class="site-header">
   <div class="header-inner">
-    <a href="index.html"><img src="images/logo.png" alt="三只松鼠" class="logo-img"></a>
-    <nav class="nav">
-      <a href="index.html" class="nav-link">首页</a>
-      <a href="products.html" class="nav-link active">产品</a>
-      <a href="contact.html" class="nav-link">联系我们</a>
+    <a href="index.html" class="site-logo">
+      <img src="images/logo.png" alt="三只松鼠" onerror="this.style.display='none'">
+      <div>
+        <div class="logo-text">三只松鼠</div>
+        <div class="logo-sub">Three Squirrels</div>
+      </div>
+    </a>
+    <nav class="header-nav" id="headerNav">
+      <a href="index.html">首页</a>
+      <a href="products.html" class="active">产品</a>
+      <a href="contact.html">联系我们</a>
     </nav>
-    <div class="header-actions">
-      <a href="contact.html" class="btn btn-sm" style="background:var(--primary);color:#fff;border:none;border-radius:8px;font-size:0.80rem;padding:8px 16px;">联系我们</a>
-      <div class="hamburger" onclick="document.getElementById('header').classList.toggle('mobile-nav-open')"><span></span><span></span><span></span></div>
-    </div>
+    <button class="cart-btn" id="cartBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      询价单
+      <span id="cartBadge">0</span>
+    </button>
+    <button class="hamburger" id="hamburger" onclick="document.getElementById('headerNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<section style="position:relative;min-height:480px;display:flex;align-items:center;overflow:hidden;">
-  <div style="position:absolute;inset:0;z-index:0;">
-    <img src="images/banner-hero.jpg" alt="三只松鼠" style="width:100%;height:100%;object-fit:cover;" loading="eager">
-    <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(15,4,4,0.85) 0%,rgba(15,4,4,0.6) 45%,rgba(230,57,70,0.35) 100%);"></div>
-  </div>
-  <div class="container" style="position:relative;z-index:1;padding-top:80px;padding-bottom:80px;">
-    <div style="max-width:600px;">
-      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(230,57,70,0.85);color:#fff;padding:5px 14px;border-radius:50px;font-size:0.75rem;font-weight:700;letter-spacing:0.5px;margin-bottom:20px;backdrop-filter:blur(4px);">精选好坚果 · 全球出口</div>
-      <h1 style="font-family:'Noto Sans SC',sans-serif;font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:700;color:#fff;line-height:1.3;margin-bottom:12px;">产品中心</h1>
-      <p style="font-family:'Noto Sans SC',sans-serif;font-size:1rem;color:rgba(255,255,255,0.8);line-height:1.7;margin:0;">共38款坚果产品，出口全球50余个国家</p>
-    </div>
+<!-- Hero -->
+<section class="hero">
+  <img src="images/banner-hero.jpg" alt="三只松鼠产品">
+  <div class="hero-overlay">
+    <h1>产品中心</h1>
+    <p>精选全球优质坚果，为海外合作伙伴提供丰富的产品线</p>
   </div>
 </section>
 
-<section style="padding:0 0 48px;background:var(--bg);">
-  <div class="container">
-    <div style="text-align:center;padding:36px 0 8px;">
-      <p style="font-family:'Noto Sans SC',sans-serif;font-size:0.85rem;color:var(--text-s);">HALAL · FDA · ISO 22000 · HACCP 多重认证 | 远销全球50余国</p>
-    </div>
-    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:8px;">
-      <a href="#small" style="padding:6px 16px;background:var(--primary);color:#fff;border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">袋装坚果</a>
-      <a href="#bulk" style="padding:6px 16px;background:#fff;color:var(--text-h);border:1.5px solid var(--border);border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">经济装</a>
-      <a href="#can" style="padding:6px 16px;background:#fff;color:var(--text-h);border:1.5px solid var(--border);border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">罐装礼盒</a>
-      <a href="#flavor" style="padding:6px 16px;background:#fff;color:var(--text-h);border:1.5px solid var(--border);border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">风味坚果</a>
-      <a href="#daily" style="padding:6px 16px;background:#fff;color:var(--text-h);border:1.5px solid var(--border);border-radius:50px;font-family:'Noto Sans SC',sans-serif;font-size:0.82rem;font-weight:700;text-decoration:none;">每日坚果</a>
-    </div>
-
-    <div class="cat-section" id="small">
-      <div class="cat-header">
-        <div class="cat-icon">🛒</div>
-        <div>
-          <h2 class="cat-title">袋装坚果（小包装）</h2>
-          <p class="cat-desc">22g ~ 150g 小包装，开袋即食，适合零售陈列</p>
-        </div>
-      </div>
-      <div class="p-grid">
-        
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pistachio-22g.jpg" alt="开心果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">开心果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pistachio</span></h3>
-          <p class="p-spec">22g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/cashew-purple-30g.jpg" alt="紫皮腰果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">紫皮腰果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Purple Cashew</span></h3>
-          <p class="p-spec">30g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/almond-35g.jpg" alt="手剥巴旦木" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">手剥巴旦木 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Almond</span></h3>
-          <p class="p-spec">35g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/macadamia-50g.jpg" alt="夏威夷果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">夏威夷果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Macadamia</span></h3>
-          <p class="p-spec">50g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pecan-55g.jpg" alt="碧根果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">碧根果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pecan</span></h3>
-          <p class="p-spec">55g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/almond-120g.jpg" alt="手剥巴旦木" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">手剥巴旦木 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Almond</span></h3>
-          <p class="p-spec">120g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/macadamia-100g.jpg" alt="夏威夷果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">夏威夷果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Macadamia</span></h3>
-          <p class="p-spec">100g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/cashew-purple-120g.jpg" alt="紫皮腰果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">紫皮腰果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Purple Cashew</span></h3>
-          <p class="p-spec">120g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pecan-120g.jpg" alt="碧根果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">碧根果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pecan</span></h3>
-          <p class="p-spec">120g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pistachio-100g.jpg" alt="开心果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">开心果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pistachio</span></h3>
-          <p class="p-spec">100g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/cashew-charred-120g.jpg" alt="炭烧腰果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">炭烧腰果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Charred Cashew</span></h3>
-          <p class="p-spec">120g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/walnut-roasted-150g.jpg" alt="奶香烤核桃" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">奶香烤核桃 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Roasted Walnut</span></h3>
-          <p class="p-spec">150g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-      </div>
-    </div>
-
-    <div class="cat-section" id="bulk">
-      <div class="cat-header">
-        <div class="cat-icon">📦</div>
-        <div>
-          <h2 class="cat-title">经济装（500g大袋）</h2>
-          <p class="cat-desc">500g 大袋装，LF认证，适合批发和分销</p>
-        </div>
-      </div>
-      <div class="p-grid">
-        
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/macadamia-500g.jpg" alt="夏威夷果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">夏威夷果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Macadamia</span></h3>
-          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/almond-500g.jpg" alt="手剥巴旦木" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">手剥巴旦木 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Almond</span></h3>
-          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/cashew-purple-500g.jpg" alt="紫皮腰果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">紫皮腰果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Purple Cashew</span></h3>
-          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pine-nut-500g.jpg" alt="开口松子" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">开口松子 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pine Nut</span></h3>
-          <p class="p-spec">500g/袋（LF） · 保质期 6个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pecan-500g.jpg" alt="碧根果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">碧根果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pecan</span></h3>
-          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pistachio-500g.jpg" alt="开心果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">开心果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pistachio</span></h3>
-          <p class="p-spec">500g/袋（LF） · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-      </div>
-    </div>
-
-    <div class="cat-section" id="can">
-      <div class="cat-header">
-        <div class="cat-icon">🎁</div>
-        <div>
-          <h2 class="cat-title">罐装坚果礼盒</h2>
-          <p class="cat-desc">精美罐装，适合节日送礼和企业采购</p>
-        </div>
-      </div>
-      <div class="p-grid">
-        
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/macadamia-can-450g.jpg" alt="罐装夏威夷果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">罐装夏威夷果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Macadamia Gift Can</span></h3>
-          <p class="p-spec">450g/罐 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/almond-can-370g.jpg" alt="罐装手剥巴旦木" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">罐装手剥巴旦木 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Almond Gift Can</span></h3>
-          <p class="p-spec">370g/罐 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/cashew-can-400g.jpg" alt="罐装紫皮腰果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">罐装紫皮腰果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Purple Cashew Gift Can</span></h3>
-          <p class="p-spec">400g/罐 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pecan-can-400g.jpg" alt="罐装碧根果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">罐装碧根果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pecan Gift Can</span></h3>
-          <p class="p-spec">400g/罐 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pistachio-can-430g.jpg" alt="罐装开心果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">罐装开心果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pistachio Gift Can</span></h3>
-          <p class="p-spec">430g/罐 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-      </div>
-    </div>
-
-    <div class="cat-section" id="flavor">
-      <div class="cat-header">
-        <div class="cat-icon">🌈</div>
-        <div>
-          <h2 class="cat-title">风味坚果</h2>
-          <p class="cat-desc">芥末、蜂蜜黄油、椰香、香辣、蟹黄等多口味</p>
-        </div>
-      </div>
-      <div class="p-grid">
-        
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/almond-honey-butter-60g.jpg" alt="蜂蜜黄油味巴旦木仁" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">蜂蜜黄油味巴旦木仁 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Honey Butter Almond</span></h3>
-          <p class="p-spec">60g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/macadamia-wasabi-75g.jpg" alt="芥末味夏威夷果仁" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">芥末味夏威夷果仁 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Wasabi Macadamia</span></h3>
-          <p class="p-spec">75g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/macadamia-60g.jpg" alt="夏威夷果仁（芥末味）" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">夏威夷果仁（芥末味） <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Wasabi Macadamia Nut</span></h3>
-          <p class="p-spec">60g/袋 · 保质期 9个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/macadamia-65g.jpg" alt="夏威夷果仁（椰香味）" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">夏威夷果仁（椰香味） <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Coconut Macadamia Nut</span></h3>
-          <p class="p-spec">65g/袋 · 保质期 9个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/walnut-flavor-25g.jpg" alt="风味核桃仁（香辣味）" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">风味核桃仁（香辣味） <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Spicy Walnut</span></h3>
-          <p class="p-spec">25g/袋 · 保质期 6个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/cashew-flavor-25g.jpg" alt="风味腰果仁（蟹黄味）" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">风味腰果仁（蟹黄味） <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Crab Flavor Cashew</span></h3>
-          <p class="p-spec">25g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-      </div>
-    </div>
-
-    <div class="cat-section" id="daily">
-      <div class="cat-header">
-        <div class="cat-icon">💚</div>
-        <div>
-          <h2 class="cat-title">每日坚果 / 混合坚果</h2>
-          <p class="cat-desc">科学配比多种坚果，每日营养搭配，出口全球50余国</p>
-        </div>
-      </div>
-      <div class="p-grid">
-        
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/mixed-nuts-seaweed-20g.jpg" alt="混合坚果海苔薄脆" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">混合坚果海苔薄脆 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Mixed Nuts Seaweed Crisps</span></h3>
-          <p class="p-spec">20g/袋 · 保质期 12个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/almond-seaweed-20g.jpg" alt="扁桃仁海苔薄脆" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">扁桃仁海苔薄脆 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Almond Seaweed Crisps</span></h3>
-          <p class="p-spec">20g/袋 · 保质期 12个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/pumpkin-seaweed-20g.jpg" alt="南瓜籽仁海苔薄脆" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">南瓜籽仁海苔薄脆 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Pumpkin Seed Seaweed Crisps</span></h3>
-          <p class="p-spec">20g/袋 · 保质期 12个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/daily-mix-325g.jpg" alt="每日坚果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">每日坚果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Daily Mixed Nuts</span></h3>
-          <p class="p-spec">325g+960ml/盒 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/daily-mix-750g.jpg" alt="每日坚果（元气款）" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">每日坚果（元气款） <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Daily Mixed Nuts Vitality</span></h3>
-          <p class="p-spec">750g/袋 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/daily-mix-box-750g.jpg" alt="每日坚果4+4礼盒装" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">每日坚果4+4礼盒装 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Daily Mixed Nuts 4+4 Gift Box</span></h3>
-          <p class="p-spec">750g/盒 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/daily-mix-500g.jpg" alt="每日坚果（终端装）" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">每日坚果（终端装） <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Daily Mixed Nuts Retail</span></h3>
-          <p class="p-spec">500g/袋（4+3*20包） · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/daily-mix-bag-500g.jpg" alt="袋装每日坚果" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">袋装每日坚果 <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Daily Mixed Nuts Pack</span></h3>
-          <p class="p-spec">25g×120包/箱 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-
-      <div class="p-card">
-        <div class="p-img"><img src="https://3songshu.github.io/three-squirrels-overseas/images/products/daily-mix-can-360g.jpg" alt="罐装每日坚果（定制款）" loading="lazy" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="p-body">
-          <h3 class="p-name">罐装每日坚果（定制款） <span style="font-family:Poppins,sans-serif;font-size:0.78em;color:#999;">Daily Mixed Nuts Custom Can</span></h3>
-          <p class="p-spec">360g×24罐/箱 · 保质期 8个月</p>
-          <div class="p-tags">
-            <span class="p-tag hal">HALAL</span>
-            <span class="p-tag fda">FDA</span>
-          </div>
-          <a href="contact.html" class="p-btn">获取报价 →</a>
-        </div>
-      </div>
-      </div>
-    </div>
+<!-- Category Nav Pills -->
+<nav class="cat-nav">
+  <div class="cat-nav-inner">
+    <a href="#small-bags" class="cat-pill active">小袋装</a>
+    <a href="#bulk-500g" class="cat-pill">散装500g</a>
+    <a href="#cans" class="cat-pill">罐装坚果</a>
+    <a href="#flavor" class="cat-pill">风味坚果</a>
+    <a href="#daily-mixed" class="cat-pill">每日坚果</a>
   </div>
-</section>
+</nav>
 
-<section style="background:linear-gradient(135deg,#E63946,#C1121F);padding:64px 0;text-align:center;">
-  <div class="container">
-    <h2 style="font-family:'Noto Sans SC',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:800;color:#fff;margin-bottom:12px;">获取详细报价和产品目录</h2>
-    <p style="color:rgba(255,255,255,0.78);font-family:'Noto Sans SC',sans-serif;font-size:0.95rem;margin-bottom:28px;">专属出口经理一对一服务，24小时内回复</p>
-    <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#E63946;border-radius:12px;font-family:'Noto Sans SC',sans-serif;font-size:0.92rem;font-weight:700;padding:13px 28px;text-decoration:none;">联系我们</a>
-  </div>
-</section>
+<!-- Main Content -->
+<main class="main-content">
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><img src="images/logo.png" alt="三只松鼠" class="footer-logo"><p>中国领先零食出口品牌，始于2012年。股票代码：300783，深圳证券交易所。HALAL · FDA · ISO 22000认证。</p></div>
-      <div><h4>导航</h4><a href="index.html">首页</a><a href="products.html">产品</a><a href="contact.html">联系我们</a></div>
-      <div><h4>产品</h4><a href="products.html">全部产品</a><a href="products.html#small">袋装坚果</a><a href="products.html#bulk">经济装</a><a href="products.html#daily">每日坚果</a></div>
-      <div><h4>联系我们</h4><a href="mailto:overseas@three-squirrels.com">overseas@three-squirrels.com</a><a href="tel:+864008888888">+86 400-888-8888</a><a href="contact.html">获取报价 →</a></div>
+  <!-- Small bags -->
+  <section class="section-block" id="small-bags">
+    <h2 class="section-title">小袋装</h2>
+    <p class="section-sub">轻便独立包装，适合零售与即食场景 · 12款产品</p>
+    <div class="p-grid">
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pistachio-22g.jpg" alt="开心果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">开心果<span class="p-en"> Pistachio</span></div>
+          <div class="p-spec">22g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('开心果', '22g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/cashew-purple-30g.jpg" alt="紫皮腰果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">紫皮腰果<span class="p-en"> Cashew</span></div>
+          <div class="p-spec">30g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('紫皮腰果', '30g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/almond-35g.jpg" alt="手剥巴旦木" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">手剥巴旦木<span class="p-en"> Almond</span></div>
+          <div class="p-spec">35g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('手剥巴旦木', '35g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/macadamia-50g.jpg" alt="夏威夷果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">夏威夷果<span class="p-en"> Macadamia</span></div>
+          <div class="p-spec">50g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('夏威夷果', '50g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pecan-55g.jpg" alt="碧根果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">碧根果<span class="p-en"> Pecan</span></div>
+          <div class="p-spec">55g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('碧根果', '55g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/almond-120g.jpg" alt="手剥巴旦木120g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">手剥巴旦木120g<span class="p-en"> Almond 120g</span></div>
+          <div class="p-spec">120g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('手剥巴旦木120g', '120g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/macadamia-100g.jpg" alt="夏威夷果100g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">夏威夷果100g<span class="p-en"> Macadamia 100g</span></div>
+          <div class="p-spec">100g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('夏威夷果100g', '100g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/cashew-purple-120g.jpg" alt="紫皮腰果120g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">紫皮腰果120g<span class="p-en"> Cashew 120g</span></div>
+          <div class="p-spec">120g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('紫皮腰果120g', '120g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pecan-120g.jpg" alt="碧根果120g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">碧根果120g<span class="p-en"> Pecan 120g</span></div>
+          <div class="p-spec">120g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('碧根果120g', '120g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pistachio-100g.jpg" alt="开心果100g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">开心果100g<span class="p-en"> Pistachio 100g</span></div>
+          <div class="p-spec">100g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('开心果100g', '100g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/cashew-charred-120g.jpg" alt="炭烧腰果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">炭烧腰果<span class="p-en"> Charred Cashew</span></div>
+          <div class="p-spec">120g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('炭烧腰果', '120g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/walnut-roasted-150g.jpg" alt="奶香烤核桃" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">奶香烤核桃<span class="p-en"> Roasted Walnut</span></div>
+          <div class="p-spec">150g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('奶香烤核桃', '150g/袋')">加入询价单</button>
+        </div>
+      </div>
+
     </div>
-    <div class="footer-bottom"><p>© 2026 三只松鼠海外官网. All rights reserved. | 股票代码：300783 | 深圳证券交易所</p></div>
-  </div>
+  </section>
+
+  <!-- Bulk 500g -->
+  <section class="section-block" id="bulk-500g">
+    <h2 class="section-title">散装500g</h2>
+    <p class="section-sub">大袋装，适合分装、批发与食品加工场景 · 6款产品</p>
+    <div class="p-grid">
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/macadamia-500g.jpg" alt="夏威夷果500g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">夏威夷果500g<span class="p-en"> Macadamia 500g</span></div>
+          <div class="p-spec">500g/袋(LF) · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('夏威夷果500g', '500g/袋(LF)')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/almond-500g.jpg" alt="手剥巴旦木500g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">手剥巴旦木500g<span class="p-en"> Almond 500g</span></div>
+          <div class="p-spec">500g/袋(LF) · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('手剥巴旦木500g', '500g/袋(LF)')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/cashew-purple-500g.jpg" alt="紫皮腰果500g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">紫皮腰果500g<span class="p-en"> Cashew 500g</span></div>
+          <div class="p-spec">500g/袋(LF) · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('紫皮腰果500g', '500g/袋(LF)')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pine-nut-500g.jpg" alt="开口松子500g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">开口松子500g<span class="p-en"> Pine Nut 500g</span></div>
+          <div class="p-spec">500g/袋(LF) · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('开口松子500g', '500g/袋(LF)')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pecan-500g.jpg" alt="碧根果500g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">碧根果500g<span class="p-en"> Pecan 500g</span></div>
+          <div class="p-spec">500g/袋(LF) · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('碧根果500g', '500g/袋(LF)')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pistachio-500g.jpg" alt="开心果500g" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">开心果500g<span class="p-en"> Pistachio 500g</span></div>
+          <div class="p-spec">500g/袋(LF) · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('开心果500g', '500g/袋(LF)')">加入询价单</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Cans -->
+  <section class="section-block" id="cans">
+    <h2 class="section-title">罐装坚果</h2>
+    <p class="section-sub">铁罐密封包装，适合礼品与高端零售场景 · 5款产品</p>
+    <div class="p-grid">
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/macadamia-can-450g.jpg" alt="罐装夏威夷果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">罐装夏威夷果<span class="p-en"> Macadamia Can</span></div>
+          <div class="p-spec">450g/罐 · 保质期18个月</div>
+          <button class="p-add-btn" onclick="addToCart('罐装夏威夷果', '450g/罐')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/almond-can-370g.jpg" alt="罐装手剥巴旦木" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">罐装手剥巴旦木<span class="p-en"> Almond Can</span></div>
+          <div class="p-spec">370g/罐 · 保质期18个月</div>
+          <button class="p-add-btn" onclick="addToCart('罐装手剥巴旦木', '370g/罐')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/cashew-can-400g.jpg" alt="罐装紫皮腰果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">罐装紫皮腰果<span class="p-en"> Cashew Can</span></div>
+          <div class="p-spec">400g/罐 · 保质期18个月</div>
+          <button class="p-add-btn" onclick="addToCart('罐装紫皮腰果', '400g/罐')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pecan-can-400g.jpg" alt="罐装碧根果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">罐装碧根果<span class="p-en"> Pecan Can</span></div>
+          <div class="p-spec">400g/罐 · 保质期18个月</div>
+          <button class="p-add-btn" onclick="addToCart('罐装碧根果', '400g/罐')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pistachio-can-430g.jpg" alt="罐装开心果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">罐装开心果<span class="p-en"> Pistachio Can</span></div>
+          <div class="p-spec">430g/罐 · 保质期18个月</div>
+          <button class="p-add-btn" onclick="addToCart('罐装开心果', '430g/罐')">加入询价单</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Flavor -->
+  <section class="section-block" id="flavor">
+    <h2 class="section-title">风味坚果</h2>
+    <p class="section-sub">多款风味定制，适合追求味觉体验的消费群体 · 6款产品</p>
+    <div class="p-grid">
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/almond-honey-butter-60g.jpg" alt="蜂蜜黄油味巴旦木仁" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">蜂蜜黄油味巴旦木仁<span class="p-en"> Honey Butter Almond</span></div>
+          <div class="p-spec">60g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('蜂蜜黄油味巴旦木仁', '60g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/macadamia-wasabi-75g.jpg" alt="芥末味夏威夷果仁" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">芥末味夏威夷果仁<span class="p-en"> Wasabi Macadamia</span></div>
+          <div class="p-spec">75g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('芥末味夏威夷果仁', '75g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/macadamia-60g.jpg" alt="夏威夷果仁(芥末味)" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">夏威夷果仁(芥末味)<span class="p-en"> Wasabi Macadamia 60g</span></div>
+          <div class="p-spec">60g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('夏威夷果仁(芥末味)', '60g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/macadamia-65g.jpg" alt="夏威夷果仁(椰香味)" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">夏威夷果仁(椰香味)<span class="p-en"> Coconut Macadamia</span></div>
+          <div class="p-spec">65g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('夏威夷果仁(椰香味)', '65g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/walnut-flavor-25g.jpg" alt="风味核桃仁(香辣味)" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">风味核桃仁(香辣味)<span class="p-en"> Spicy Walnut</span></div>
+          <div class="p-spec">25g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('风味核桃仁(香辣味)', '25g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/cashew-flavor-25g.jpg" alt="风味腰果仁(蟹黄味)" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">风味腰果仁(蟹黄味)<span class="p-en"> Crab Roe Cashew</span></div>
+          <div class="p-spec">25g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('风味腰果仁(蟹黄味)', '25g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Daily/Mixed -->
+  <section class="section-block" id="daily-mixed">
+    <h2 class="section-title">每日坚果</h2>
+    <p class="section-sub">科学配比每日所需坚果与果干，适合健康消费场景 · 9款产品</p>
+    <div class="p-grid">
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/mixed-nuts-seaweed-20g.jpg" alt="混合坚果海苔薄脆" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">混合坚果海苔薄脆<span class="p-en"> Mixed Nuts Seaweed Crisp</span></div>
+          <div class="p-spec">20g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('混合坚果海苔薄脆', '20g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/almond-seaweed-20g.jpg" alt="扁桃仁海苔薄脆" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">扁桃仁海苔薄脆<span class="p-en"> Almond Seaweed Crisp</span></div>
+          <div class="p-spec">20g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('扁桃仁海苔薄脆', '20g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/pumpkin-seaweed-20g.jpg" alt="南瓜籽仁海苔薄脆" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">南瓜籽仁海苔薄脆<span class="p-en"> Pumpkin Seed Seaweed Crisp</span></div>
+          <div class="p-spec">20g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('南瓜籽仁海苔薄脆', '20g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/daily-mix-325g.jpg" alt="每日坚果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">每日坚果<span class="p-en"> Daily Mix</span></div>
+          <div class="p-spec">325g+960ml/盒 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('每日坚果', '325g+960ml/盒')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/daily-mix-750g.jpg" alt="每日坚果(元气款)" loading="lazy"></div>
+        <div class
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/daily-mix-750g.jpg" alt="每日坚果(元气款)" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">每日坚果(元气款)<span class="p-en"> Daily Mix 750g</span></div>
+          <div class="p-spec">750g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('每日坚果(元气款)', '750g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/daily-mix-box-750g.jpg" alt="每日坚果4+4礼盒装" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">每日坚果4+4礼盒装<span class="p-en"> Daily Mix 4+4 Gift Box</span></div>
+          <div class="p-spec">750g/盒 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('每日坚果4+4礼盒装', '750g/盒')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/daily-mix-500g.jpg" alt="每日坚果(终端装)" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">每日坚果(终端装)<span class="p-en"> Daily Mix 500g</span></div>
+          <div class="p-spec">500g/袋 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('每日坚果(终端装)', '500g/袋')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/daily-mix-bag-500g.jpg" alt="袋装每日坚果" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">袋装每日坚果<span class="p-en"> Daily Mix Bag</span></div>
+          <div class="p-spec">25g×120包/箱 · 保质期12个月</div>
+          <button class="p-add-btn" onclick="addToCart('袋装每日坚果', '25g×120包/箱')">加入询价单</button>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="p-img"><img src="images/products/daily-mix-can-360g.jpg" alt="罐装每日坚果(定制款)" loading="lazy"></div>
+        <div class="p-body">
+          <div class="p-name">罐装每日坚果(定制款)<span class="p-en"> Daily Mix Can Custom</span></div>
+          <div class="p-spec">360g×24罐/箱 · 保质期18个月</div>
+          <button class="p-add-btn" onclick="addToCart('罐装每日坚果(定制款)', '360g×24罐/箱')">加入询价单</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>Copyright &copy; 2024 Three Squirrels. All rights reserved.</p>
+  <p style="margin-top:6px;"><a href="index.html">首页</a> &nbsp;|&nbsp; <a href="products.html">产品</a> &nbsp;|&nbsp; <a href="contact.html">联系我们</a></p>
 </footer>
 
+<!-- Cart Modal -->
+<div id="cartModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:16px;max-width:600px;width:95%;max-height:90vh;overflow-y:auto;padding:24px;position:relative;">
+    <button onclick="closeCart()" style="position:absolute;top:12px;right:12px;background:none;border:none;font-size:1.2rem;cursor:pointer;">&#10005;</button>
+    <h2 style="font-family:'Noto Sans SC',sans-serif;font-size:1.2rem;font-weight:800;margin-bottom:16px;">询价单 <span id="cartCount" style="color:var(--primary);"></span></h2>
+    <div id="cartItems"></div>
+    <div id="cartForm" style="border-top:1px solid #eee;padding-top:16px;margin-top:12px;">
+      <h3 style="font-family:'Noto Sans SC',sans-serif;font-size:0.95rem;font-weight:700;margin-bottom:12px;">填写联系信息</h3>
+      <input id="cf_company" type="text" placeholder="公司名称 *" style="width:100%;padding:10px;border:1.5px solid #ddd;border-radius:8px;margin-bottom:8px;box-sizing:border-box;font-family:'Noto Sans SC',sans-serif;">
+      <input id="cf_email" type="email" placeholder="邮箱 *" style="width:100%;padding:10px;border:1.5px solid #ddd;border-radius:8px;margin-bottom:8px;box-sizing:border-box;font-family:'Noto Sans SC',sans-serif;">
+      <input id="cf_phone" type="tel" placeholder="电话" style="width:100%;padding:10px;border:1.5px solid #ddd;border-radius:8px;margin-bottom:8px;box-sizing:border-box;font-family:'Noto Sans SC',sans-serif;">
+      <textarea id="cf_notes" rows="3" placeholder="备注（意向数量、目标市场、交货条件等）" style="width:100%;padding:10px;border:1.5px solid #ddd;border-radius:8px;margin-bottom:12px;box-sizing:border-box;resize:vertical;font-family:'Noto Sans SC',sans-serif;"></textarea>
+      <button onclick="submitInquiry()" style="width:100%;padding:12px;background:#E63946;color:#fff;border:none;border-radius:10px;font-family:'Noto Sans SC',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;">提交询盘</button>
+      <p id="cartSubmitMsg" style="font-size:0.78rem;color:#888;text-align:center;margin-top:8px;"></p>
+    </div>
+  </div>
+</div>
+
 <script>
-document.addEventListener('DOMContentLoaded',function(){
-  if(window.lucide)lucide.createIcons();
-  window.addEventListener('scroll',function(){
-    var h=document.getElementById('header');
-    if(h)h.classList.toggle('scrolled',window.scrollY>40);
+// Cart state
+var cart = JSON.parse(localStorage.getItem('ss_cart') || '[]');
+var CART_KEY = 'ss_cart';
+
+function updateBadge() {
+  var badge = document.getElementById('cartBadge');
+  if (badge) {
+    badge.textContent = cart.reduce(function(sum, item) { return sum + item.qty; }, 0);
+    badge.style.display = cart.length > 0 ? 'flex' : 'none';
+  }
+}
+
+function addToCart(name, spec) {
+  var existing = cart.find(function(item) { return item.name === name; });
+  if (existing) {
+    existing.qty = (existing.qty || 1) + 1;
+  } else {
+    cart.push({name: name, spec: spec, qty: 1});
+  }
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  updateBadge();
+  // Brief flash on matching button
+  var btns = document.querySelectorAll('.p-add-btn');
+  btns.forEach(function(b) {
+    if (b.getAttribute('onclick') && b.getAttribute('onclick').indexOf(name) !== -1) {
+      var orig = b.textContent;
+      b.textContent = '\u2713 已加入';
+      b.style.background = '#22C55E';
+      setTimeout(function() { b.textContent = orig; b.style.background = ''; }, 1200);
+    }
   });
+}
+
+function openCart() {
+  var modal = document.getElementById('cartModal');
+  if (!modal) return;
+  modal.style.display = 'flex';
+  renderCartItems();
+}
+
+function closeCart() {
+  var modal = document.getElementById('cartModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function removeFromCart(idx) {
+  cart.splice(idx, 1);
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  updateBadge();
+  renderCartItems();
+}
+
+function changeQty(idx, delta) {
+  cart[idx].qty = Math.max(1, (cart[idx].qty || 1) + delta);
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  renderCartItems();
+}
+
+function renderCartItems() {
+  var container = document.getElementById('cartItems');
+  var countEl = document.getElementById('cartCount');
+  if (!container) return;
+  if (cart.length === 0) {
+    container.innerHTML = '<p style="text-align:center;color:#888;font-family:\'Noto Sans SC\',sans-serif;padding:24px 0;">询价单是空的，请先添加产品</p>';
+    if (countEl) countEl.textContent = '';
+    return;
+  }
+  if (countEl) countEl.textContent = '(' + cart.length + '款产品)';
+  var html = '<table style="width:100%;border-collapse:collapse;font-family:\'Noto Sans SC\',sans-serif;font-size:0.85rem;">';
+  html += '<tr style="border-bottom:1px solid #eee;"><th style="text-align:left;padding:6px 0;color:#666;font-weight:600;">产品</th><th style="padding:6px 0;color:#666;font-weight:600;">规格</th><th style="padding:6px 8px;color:#666;font-weight:600;">数量</th><th style="padding:6px 0;"></th></tr>';
+  cart.forEach(function(item, i) {
+    html += '<tr style="border-bottom:1px solid #f5f5f5;">';
+    html += '<td style="padding:8px 0;font-weight:600;color:#333;">' + item.name + '</td>';
+    html += '<td style="padding:8px 8px;color:#888;font-size:0.8rem;">' + (item.spec || '') + '</td>';
+    html += '<td style="padding:8px 6px;"><button onclick="changeQty(' + i + ',-1)" style="background:#f0f0f0;border:none;width:22px;height:22px;border-radius:4px;cursor:pointer;font-size:0.9rem;line-height:1;">-</button> <span style="display:inline-block;min-width:20px;text-align:center;">' + (item.qty || 1) + '</span> <button onclick="changeQty(' + i + ',1)" style="background:#f0f0f0;border:none;width:22px;height:22px;border-radius:4px;cursor:pointer;font-size:0.9rem;line-height:1;">+</button></td>';
+    html += '<td style="padding:8px 0;text-align:right;"><button onclick="removeFromCart(' + i + ')" style="background:none;border:none;color:#E63946;cursor:pointer;font-size:0.85rem;">删除</button></td>';
+    html += '</tr>';
+  });
+  html += '</table>';
+  container.innerHTML = html;
+}
+
+function submitInquiry() {
+  var company = document.getElementById('cf_company').value.trim();
+  var email = document.getElementById('cf_email').value.trim();
+  var phone = document.getElementById('cf_phone').value.trim();
+  var notes = document.getElementById('cf_notes').value.trim();
+  if (!company || !email) {
+    alert('请填写公司名称和邮箱');
+    return;
+  }
+  if (!email.includes('@')) {
+    alert('请填写有效的邮箱地址');
+    return;
+  }
+  var productList = cart.map(function(item) { return item.name + ' (' + item.spec + ') x' + item.qty; }).join(', ');
+  var msgEl = document.getElementById('cartSubmitMsg');
+  if (msgEl) { msgEl.textContent = '正在提交...'; msgEl.style.color = '#E63946'; }
+  var subject = '【询盘】来自 ' + company + ' - 三只松鼠海外官网';
+  var body = '公司名称: ' + company + '\n邮箱: ' + email + '\n电话: ' + phone + '\n\n意向产品:\n' + cart.map(function(i) { return '- ' + i.name + ' (' + i.spec + ') x' + i.qty; }).join('\n') + '\n\n备注:\n' + notes;
+  if (typeof emailjs !== 'undefined') {
+    var templateParams = {
+      from_company: company,
+      from_email: email,
+      from_phone: phone,
+      product_list: productList,
+      message: notes,
+      to_email: 'overseas@three-squirrels.com'
+    };
+    emailjs.send('service_inquiry', 'template_inquiry', templateParams)
+      .then(function() { showSubmitSuccess(); }, function() { showSubmitSuccess(); });
+  } else {
+    var mailtoLink = 'mailto:overseas@three-squirrels.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    window.location.href = mailtoLink;
+    showSubmitSuccess();
+  }
+}
+
+function showSubmitSuccess() {
+  var container = document.getElementById('cartItems');
+  var form = document.getElementById('cartForm');
+  if (container) container.innerHTML = '<div style="text-align:center;padding:32px 0;"><div style="font-size:3rem;margin-bottom:12px;">&#10004;</div><p style="font-family:\'Noto Sans SC\',sans-serif;font-weight:700;font-size:1.05rem;color:#333;margin-bottom:6px;">询盘已提交！</p><p style="font-family:\'Noto Sans SC\',sans-serif;font-size:0.85rem;color:#888;">我们的出口团队将在24小时内与您联系。</p></div>';
+  if (form) form.style.display = 'none';
+  cart = [];
+  localStorage.setItem(CART_KEY, '[]');
+  updateBadge();
+}
+
+// Close modal on backdrop click
+document.addEventListener('DOMContentLoaded', function() {
+  updateBadge();
+  var cartBtn = document.getElementById('cartBtn');
+  if (cartBtn) cartBtn.addEventListener('click', openCart);
+  var modal = document.getElementById('cartModal');
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeCart();
+    });
+  }
 });
 </script>
-</body></html>
+
+</body>
+</html>
